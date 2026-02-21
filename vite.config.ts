@@ -6,8 +6,6 @@ import react from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
 import viteTsConfigPaths from "vite-tsconfig-paths";
-import "./src/packages/env/server.ts";
-import "./src/packages/env/client.ts";
 
 const config = defineConfig({
 	plugins: [

@@ -11,1384 +11,764 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as DesignLayoutRouteImport } from './routes/design/layout'
-import { Route as authLayoutRouteImport } from './routes/(auth)/layout'
-import { Route as homePageRouteImport } from './routes/(home)/page'
-import { Route as ApiSplatRouteImport } from './routes/api/$'
-import { Route as homeLegalLayoutRouteImport } from './routes/(home)/legal/layout'
-import { Route as appCalendarLayoutRouteImport } from './routes/(app)/calendar/layout'
-import { Route as homeLegalPageRouteImport } from './routes/(home)/legal/page'
-import { Route as authVerifyEmailPageRouteImport } from './routes/(auth)/verify-email/page'
-import { Route as authSignupPageRouteImport } from './routes/(auth)/signup/page'
-import { Route as authSigninPageRouteImport } from './routes/(auth)/signin/page'
-import { Route as authResetPasswordPageRouteImport } from './routes/(auth)/reset-password/page'
-import { Route as authForgotPasswordPageRouteImport } from './routes/(auth)/forgot-password/page'
-import { Route as appWelcomePageRouteImport } from './routes/(app)/welcome/page'
-import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
-import { Route as appCalendarSplatRouteImport } from './routes/(app)/calendar/$'
-import { Route as homeLegalTermsPageRouteImport } from './routes/(home)/legal/terms/page'
-import { Route as homeLegalPrivacyPageRouteImport } from './routes/(home)/legal/privacy/page'
-import { Route as homeLegalCookiesPageRouteImport } from './routes/(home)/legal/cookies/page'
-import { Route as authForgotPasswordSentPageRouteImport } from './routes/(auth)/forgot-password/sent/page'
 
-const DesignPageLazyRouteImport = createFileRoute('/design/')()
-const DesignTypographyPageLazyRouteImport = createFileRoute(
-  '/design/typography/',
-)()
-const DesignTooltipPageLazyRouteImport = createFileRoute('/design/tooltip/')()
-const DesignTextareaPageLazyRouteImport = createFileRoute('/design/textarea/')()
-const DesignTabsPageLazyRouteImport = createFileRoute('/design/tabs/')()
-const DesignTablePageLazyRouteImport = createFileRoute('/design/table/')()
-const DesignSwitchPageLazyRouteImport = createFileRoute('/design/switch/')()
-const DesignSpinnerPageLazyRouteImport = createFileRoute('/design/spinner/')()
-const DesignSonnerPageLazyRouteImport = createFileRoute('/design/sonner/')()
-const DesignSliderPageLazyRouteImport = createFileRoute('/design/slider/')()
-const DesignSkeletonPageLazyRouteImport = createFileRoute('/design/skeleton/')()
-const DesignSidebarPageLazyRouteImport = createFileRoute('/design/sidebar/')()
-const DesignSheetPageLazyRouteImport = createFileRoute('/design/sheet/')()
-const DesignSeparatorPageLazyRouteImport =
-  createFileRoute('/design/separator/')()
-const DesignSelectPageLazyRouteImport = createFileRoute('/design/select/')()
-const DesignRadioGroupPageLazyRouteImport = createFileRoute(
-  '/design/radio-group/',
-)()
-const DesignPopoverPageLazyRouteImport = createFileRoute('/design/popover/')()
-const DesignNativeSelectPageLazyRouteImport = createFileRoute(
-  '/design/native-select/',
-)()
-const DesignLinkPageLazyRouteImport = createFileRoute('/design/link/')()
-const DesignLabelPageLazyRouteImport = createFileRoute('/design/label/')()
-const DesignKbdPageLazyRouteImport = createFileRoute('/design/kbd/')()
-const DesignItemPageLazyRouteImport = createFileRoute('/design/item/')()
-const DesignInputPageLazyRouteImport = createFileRoute('/design/input/')()
-const DesignInputGroupPageLazyRouteImport = createFileRoute(
-  '/design/input-group/',
-)()
-const DesignFieldPageLazyRouteImport = createFileRoute('/design/field/')()
-const DesignEmptyPageLazyRouteImport = createFileRoute('/design/empty/')()
-const DesignDropdownMenuPageLazyRouteImport = createFileRoute(
-  '/design/dropdown-menu/',
-)()
-const DesignDialogPageLazyRouteImport = createFileRoute('/design/dialog/')()
-const DesignComboboxPageLazyRouteImport = createFileRoute('/design/combobox/')()
-const DesignCollapsiblePageLazyRouteImport = createFileRoute(
-  '/design/collapsible/',
-)()
-const DesignCheckboxPageLazyRouteImport = createFileRoute('/design/checkbox/')()
-const DesignCardPageLazyRouteImport = createFileRoute('/design/card/')()
-const DesignCalendarPageLazyRouteImport = createFileRoute('/design/calendar/')()
-const DesignButtonPageLazyRouteImport = createFileRoute('/design/button/')()
-const DesignButtonGroupPageLazyRouteImport = createFileRoute(
-  '/design/button-group/',
-)()
-const DesignBadgePageLazyRouteImport = createFileRoute('/design/badge/')()
-const DesignAvatarPageLazyRouteImport = createFileRoute('/design/avatar/')()
-const DesignAlertPageLazyRouteImport = createFileRoute('/design/alert/')()
-const DesignAlertDialogPageLazyRouteImport = createFileRoute(
-  '/design/alert-dialog/',
-)()
+const PageLazyRouteImport = createFileRoute('/')()
+const TypographyPageLazyRouteImport = createFileRoute('/typography/')()
+const TooltipPageLazyRouteImport = createFileRoute('/tooltip/')()
+const TextareaPageLazyRouteImport = createFileRoute('/textarea/')()
+const TabsPageLazyRouteImport = createFileRoute('/tabs/')()
+const SwitchPageLazyRouteImport = createFileRoute('/switch/')()
+const SpinnerPageLazyRouteImport = createFileRoute('/spinner/')()
+const SonnerPageLazyRouteImport = createFileRoute('/sonner/')()
+const SliderPageLazyRouteImport = createFileRoute('/slider/')()
+const SkeletonPageLazyRouteImport = createFileRoute('/skeleton/')()
+const SidebarPageLazyRouteImport = createFileRoute('/sidebar/')()
+const SeparatorPageLazyRouteImport = createFileRoute('/separator/')()
+const SelectPageLazyRouteImport = createFileRoute('/select/')()
+const RadioGroupPageLazyRouteImport = createFileRoute('/radio-group/')()
+const PopoverPageLazyRouteImport = createFileRoute('/popover/')()
+const NativeSelectPageLazyRouteImport = createFileRoute('/native-select/')()
+const LinkPageLazyRouteImport = createFileRoute('/link/')()
+const KbdPageLazyRouteImport = createFileRoute('/kbd/')()
+const ItemPageLazyRouteImport = createFileRoute('/item/')()
+const InputPageLazyRouteImport = createFileRoute('/input/')()
+const InputGroupPageLazyRouteImport = createFileRoute('/input-group/')()
+const FieldPageLazyRouteImport = createFileRoute('/field/')()
+const EmptyPageLazyRouteImport = createFileRoute('/empty/')()
+const DialogPageLazyRouteImport = createFileRoute('/dialog/')()
+const ComboboxPageLazyRouteImport = createFileRoute('/combobox/')()
+const CollapsiblePageLazyRouteImport = createFileRoute('/collapsible/')()
+const CheckboxPageLazyRouteImport = createFileRoute('/checkbox/')()
+const CardPageLazyRouteImport = createFileRoute('/card/')()
+const ButtonPageLazyRouteImport = createFileRoute('/button/')()
+const ButtonGroupPageLazyRouteImport = createFileRoute('/button-group/')()
+const BadgePageLazyRouteImport = createFileRoute('/badge/')()
+const AvatarPageLazyRouteImport = createFileRoute('/avatar/')()
+const AlertPageLazyRouteImport = createFileRoute('/alert/')()
+const AlertDialogPageLazyRouteImport = createFileRoute('/alert-dialog/')()
 
-const DesignLayoutRoute = DesignLayoutRouteImport.update({
-  id: '/design',
-  path: '/design',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const authLayoutRoute = authLayoutRouteImport.update({
-  id: '/(auth)',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DesignPageLazyRoute = DesignPageLazyRouteImport.update({
+const PageLazyRoute = PageLazyRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() => import('./routes/design/page.lazy').then((d) => d.Route))
-const homePageRoute = homePageRouteImport.update({
-  id: '/(home)/',
-  path: '/',
   getParentRoute: () => rootRouteImport,
-} as any)
-const ApiSplatRoute = ApiSplatRouteImport.update({
-  id: '/api/$',
-  path: '/api/$',
+} as any).lazy(() => import('./routes/page.lazy').then((d) => d.Route))
+const TypographyPageLazyRoute = TypographyPageLazyRouteImport.update({
+  id: '/typography/',
+  path: '/typography/',
   getParentRoute: () => rootRouteImport,
-} as any)
-const homeLegalLayoutRoute = homeLegalLayoutRouteImport.update({
-  id: '/(home)/legal',
-  path: '/legal',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const appCalendarLayoutRoute = appCalendarLayoutRouteImport.update({
-  id: '/(app)/calendar',
-  path: '/calendar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DesignTypographyPageLazyRoute =
-  DesignTypographyPageLazyRouteImport.update({
-    id: '/typography/',
-    path: '/typography/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/typography/page.lazy').then((d) => d.Route),
-  )
-const DesignTooltipPageLazyRoute = DesignTooltipPageLazyRouteImport.update({
+} as any).lazy(() =>
+  import('./routes/typography/page.lazy').then((d) => d.Route),
+)
+const TooltipPageLazyRoute = TooltipPageLazyRouteImport.update({
   id: '/tooltip/',
   path: '/tooltip/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/tooltip/page.lazy').then((d) => d.Route),
-)
-const DesignTextareaPageLazyRoute = DesignTextareaPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/tooltip/page.lazy').then((d) => d.Route))
+const TextareaPageLazyRoute = TextareaPageLazyRouteImport.update({
   id: '/textarea/',
   path: '/textarea/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/textarea/page.lazy').then((d) => d.Route),
-)
-const DesignTabsPageLazyRoute = DesignTabsPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/textarea/page.lazy').then((d) => d.Route))
+const TabsPageLazyRoute = TabsPageLazyRouteImport.update({
   id: '/tabs/',
   path: '/tabs/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/tabs/page.lazy').then((d) => d.Route),
-)
-const DesignTablePageLazyRoute = DesignTablePageLazyRouteImport.update({
-  id: '/table/',
-  path: '/table/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/table/page.lazy').then((d) => d.Route),
-)
-const DesignSwitchPageLazyRoute = DesignSwitchPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/tabs/page.lazy').then((d) => d.Route))
+const SwitchPageLazyRoute = SwitchPageLazyRouteImport.update({
   id: '/switch/',
   path: '/switch/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/switch/page.lazy').then((d) => d.Route),
-)
-const DesignSpinnerPageLazyRoute = DesignSpinnerPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/switch/page.lazy').then((d) => d.Route))
+const SpinnerPageLazyRoute = SpinnerPageLazyRouteImport.update({
   id: '/spinner/',
   path: '/spinner/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/spinner/page.lazy').then((d) => d.Route),
-)
-const DesignSonnerPageLazyRoute = DesignSonnerPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/spinner/page.lazy').then((d) => d.Route))
+const SonnerPageLazyRoute = SonnerPageLazyRouteImport.update({
   id: '/sonner/',
   path: '/sonner/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/sonner/page.lazy').then((d) => d.Route),
-)
-const DesignSliderPageLazyRoute = DesignSliderPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/sonner/page.lazy').then((d) => d.Route))
+const SliderPageLazyRoute = SliderPageLazyRouteImport.update({
   id: '/slider/',
   path: '/slider/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/slider/page.lazy').then((d) => d.Route),
-)
-const DesignSkeletonPageLazyRoute = DesignSkeletonPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/slider/page.lazy').then((d) => d.Route))
+const SkeletonPageLazyRoute = SkeletonPageLazyRouteImport.update({
   id: '/skeleton/',
   path: '/skeleton/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/skeleton/page.lazy').then((d) => d.Route),
-)
-const DesignSidebarPageLazyRoute = DesignSidebarPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/skeleton/page.lazy').then((d) => d.Route))
+const SidebarPageLazyRoute = SidebarPageLazyRouteImport.update({
   id: '/sidebar/',
   path: '/sidebar/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/sidebar/page.lazy').then((d) => d.Route),
-)
-const DesignSheetPageLazyRoute = DesignSheetPageLazyRouteImport.update({
-  id: '/sheet/',
-  path: '/sheet/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/sheet/page.lazy').then((d) => d.Route),
-)
-const DesignSeparatorPageLazyRoute = DesignSeparatorPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/sidebar/page.lazy').then((d) => d.Route))
+const SeparatorPageLazyRoute = SeparatorPageLazyRouteImport.update({
   id: '/separator/',
   path: '/separator/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/separator/page.lazy').then((d) => d.Route),
+  import('./routes/separator/page.lazy').then((d) => d.Route),
 )
-const DesignSelectPageLazyRoute = DesignSelectPageLazyRouteImport.update({
+const SelectPageLazyRoute = SelectPageLazyRouteImport.update({
   id: '/select/',
   path: '/select/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/select/page.lazy').then((d) => d.Route))
+const RadioGroupPageLazyRoute = RadioGroupPageLazyRouteImport.update({
+  id: '/radio-group/',
+  path: '/radio-group/',
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/select/page.lazy').then((d) => d.Route),
+  import('./routes/radio-group/page.lazy').then((d) => d.Route),
 )
-const DesignRadioGroupPageLazyRoute =
-  DesignRadioGroupPageLazyRouteImport.update({
-    id: '/radio-group/',
-    path: '/radio-group/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/radio-group/page.lazy').then((d) => d.Route),
-  )
-const DesignPopoverPageLazyRoute = DesignPopoverPageLazyRouteImport.update({
+const PopoverPageLazyRoute = PopoverPageLazyRouteImport.update({
   id: '/popover/',
   path: '/popover/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/popover/page.lazy').then((d) => d.Route))
+const NativeSelectPageLazyRoute = NativeSelectPageLazyRouteImport.update({
+  id: '/native-select/',
+  path: '/native-select/',
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/popover/page.lazy').then((d) => d.Route),
+  import('./routes/native-select/page.lazy').then((d) => d.Route),
 )
-const DesignNativeSelectPageLazyRoute =
-  DesignNativeSelectPageLazyRouteImport.update({
-    id: '/native-select/',
-    path: '/native-select/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/native-select/page.lazy').then((d) => d.Route),
-  )
-const DesignLinkPageLazyRoute = DesignLinkPageLazyRouteImport.update({
+const LinkPageLazyRoute = LinkPageLazyRouteImport.update({
   id: '/link/',
   path: '/link/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/link/page.lazy').then((d) => d.Route),
-)
-const DesignLabelPageLazyRoute = DesignLabelPageLazyRouteImport.update({
-  id: '/label/',
-  path: '/label/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/label/page.lazy').then((d) => d.Route),
-)
-const DesignKbdPageLazyRoute = DesignKbdPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/link/page.lazy').then((d) => d.Route))
+const KbdPageLazyRoute = KbdPageLazyRouteImport.update({
   id: '/kbd/',
   path: '/kbd/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/kbd/page.lazy').then((d) => d.Route),
-)
-const DesignItemPageLazyRoute = DesignItemPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/kbd/page.lazy').then((d) => d.Route))
+const ItemPageLazyRoute = ItemPageLazyRouteImport.update({
   id: '/item/',
   path: '/item/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/item/page.lazy').then((d) => d.Route),
-)
-const DesignInputPageLazyRoute = DesignInputPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/item/page.lazy').then((d) => d.Route))
+const InputPageLazyRoute = InputPageLazyRouteImport.update({
   id: '/input/',
   path: '/input/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/input/page.lazy').then((d) => d.Route))
+const InputGroupPageLazyRoute = InputGroupPageLazyRouteImport.update({
+  id: '/input-group/',
+  path: '/input-group/',
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/input/page.lazy').then((d) => d.Route),
+  import('./routes/input-group/page.lazy').then((d) => d.Route),
 )
-const DesignInputGroupPageLazyRoute =
-  DesignInputGroupPageLazyRouteImport.update({
-    id: '/input-group/',
-    path: '/input-group/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/input-group/page.lazy').then((d) => d.Route),
-  )
-const DesignFieldPageLazyRoute = DesignFieldPageLazyRouteImport.update({
+const FieldPageLazyRoute = FieldPageLazyRouteImport.update({
   id: '/field/',
   path: '/field/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/field/page.lazy').then((d) => d.Route),
-)
-const DesignEmptyPageLazyRoute = DesignEmptyPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/field/page.lazy').then((d) => d.Route))
+const EmptyPageLazyRoute = EmptyPageLazyRouteImport.update({
   id: '/empty/',
   path: '/empty/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/empty/page.lazy').then((d) => d.Route),
-)
-const DesignDropdownMenuPageLazyRoute =
-  DesignDropdownMenuPageLazyRouteImport.update({
-    id: '/dropdown-menu/',
-    path: '/dropdown-menu/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/dropdown-menu/page.lazy').then((d) => d.Route),
-  )
-const DesignDialogPageLazyRoute = DesignDialogPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/empty/page.lazy').then((d) => d.Route))
+const DialogPageLazyRoute = DialogPageLazyRouteImport.update({
   id: '/dialog/',
   path: '/dialog/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/dialog/page.lazy').then((d) => d.Route),
-)
-const DesignComboboxPageLazyRoute = DesignComboboxPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/dialog/page.lazy').then((d) => d.Route))
+const ComboboxPageLazyRoute = ComboboxPageLazyRouteImport.update({
   id: '/combobox/',
   path: '/combobox/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/combobox/page.lazy').then((d) => d.Route))
+const CollapsiblePageLazyRoute = CollapsiblePageLazyRouteImport.update({
+  id: '/collapsible/',
+  path: '/collapsible/',
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/combobox/page.lazy').then((d) => d.Route),
+  import('./routes/collapsible/page.lazy').then((d) => d.Route),
 )
-const DesignCollapsiblePageLazyRoute =
-  DesignCollapsiblePageLazyRouteImport.update({
-    id: '/collapsible/',
-    path: '/collapsible/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/collapsible/page.lazy').then((d) => d.Route),
-  )
-const DesignCheckboxPageLazyRoute = DesignCheckboxPageLazyRouteImport.update({
+const CheckboxPageLazyRoute = CheckboxPageLazyRouteImport.update({
   id: '/checkbox/',
   path: '/checkbox/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/checkbox/page.lazy').then((d) => d.Route),
-)
-const DesignCardPageLazyRoute = DesignCardPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/checkbox/page.lazy').then((d) => d.Route))
+const CardPageLazyRoute = CardPageLazyRouteImport.update({
   id: '/card/',
   path: '/card/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/card/page.lazy').then((d) => d.Route),
-)
-const DesignCalendarPageLazyRoute = DesignCalendarPageLazyRouteImport.update({
-  id: '/calendar/',
-  path: '/calendar/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/calendar/page.lazy').then((d) => d.Route),
-)
-const DesignButtonPageLazyRoute = DesignButtonPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/card/page.lazy').then((d) => d.Route))
+const ButtonPageLazyRoute = ButtonPageLazyRouteImport.update({
   id: '/button/',
   path: '/button/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/button/page.lazy').then((d) => d.Route))
+const ButtonGroupPageLazyRoute = ButtonGroupPageLazyRouteImport.update({
+  id: '/button-group/',
+  path: '/button-group/',
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/button/page.lazy').then((d) => d.Route),
+  import('./routes/button-group/page.lazy').then((d) => d.Route),
 )
-const DesignButtonGroupPageLazyRoute =
-  DesignButtonGroupPageLazyRouteImport.update({
-    id: '/button-group/',
-    path: '/button-group/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/button-group/page.lazy').then((d) => d.Route),
-  )
-const DesignBadgePageLazyRoute = DesignBadgePageLazyRouteImport.update({
+const BadgePageLazyRoute = BadgePageLazyRouteImport.update({
   id: '/badge/',
   path: '/badge/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/badge/page.lazy').then((d) => d.Route),
-)
-const DesignAvatarPageLazyRoute = DesignAvatarPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/badge/page.lazy').then((d) => d.Route))
+const AvatarPageLazyRoute = AvatarPageLazyRouteImport.update({
   id: '/avatar/',
   path: '/avatar/',
-  getParentRoute: () => DesignLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/design/avatar/page.lazy').then((d) => d.Route),
-)
-const DesignAlertPageLazyRoute = DesignAlertPageLazyRouteImport.update({
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/avatar/page.lazy').then((d) => d.Route))
+const AlertPageLazyRoute = AlertPageLazyRouteImport.update({
   id: '/alert/',
   path: '/alert/',
-  getParentRoute: () => DesignLayoutRoute,
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/alert/page.lazy').then((d) => d.Route))
+const AlertDialogPageLazyRoute = AlertDialogPageLazyRouteImport.update({
+  id: '/alert-dialog/',
+  path: '/alert-dialog/',
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
-  import('./routes/design/alert/page.lazy').then((d) => d.Route),
+  import('./routes/alert-dialog/page.lazy').then((d) => d.Route),
 )
-const DesignAlertDialogPageLazyRoute =
-  DesignAlertDialogPageLazyRouteImport.update({
-    id: '/alert-dialog/',
-    path: '/alert-dialog/',
-    getParentRoute: () => DesignLayoutRoute,
-  } as any).lazy(() =>
-    import('./routes/design/alert-dialog/page.lazy').then((d) => d.Route),
-  )
-const homeLegalPageRoute = homeLegalPageRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => homeLegalLayoutRoute,
-} as any)
-const authVerifyEmailPageRoute = authVerifyEmailPageRouteImport.update({
-  id: '/verify-email/',
-  path: '/verify-email/',
-  getParentRoute: () => authLayoutRoute,
-} as any)
-const authSignupPageRoute = authSignupPageRouteImport.update({
-  id: '/signup/',
-  path: '/signup/',
-  getParentRoute: () => authLayoutRoute,
-} as any)
-const authSigninPageRoute = authSigninPageRouteImport.update({
-  id: '/signin/',
-  path: '/signin/',
-  getParentRoute: () => authLayoutRoute,
-} as any)
-const authResetPasswordPageRoute = authResetPasswordPageRouteImport.update({
-  id: '/reset-password/',
-  path: '/reset-password/',
-  getParentRoute: () => authLayoutRoute,
-} as any)
-const authForgotPasswordPageRoute = authForgotPasswordPageRouteImport.update({
-  id: '/forgot-password/',
-  path: '/forgot-password/',
-  getParentRoute: () => authLayoutRoute,
-} as any)
-const appWelcomePageRoute = appWelcomePageRouteImport.update({
-  id: '/(app)/welcome/',
-  path: '/welcome/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
-  id: '/api/auth/$',
-  path: '/api/auth/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const appCalendarSplatRoute = appCalendarSplatRouteImport.update({
-  id: '/$',
-  path: '/$',
-  getParentRoute: () => appCalendarLayoutRoute,
-} as any)
-const homeLegalTermsPageRoute = homeLegalTermsPageRouteImport.update({
-  id: '/terms/',
-  path: '/terms/',
-  getParentRoute: () => homeLegalLayoutRoute,
-} as any)
-const homeLegalPrivacyPageRoute = homeLegalPrivacyPageRouteImport.update({
-  id: '/privacy/',
-  path: '/privacy/',
-  getParentRoute: () => homeLegalLayoutRoute,
-} as any)
-const homeLegalCookiesPageRoute = homeLegalCookiesPageRouteImport.update({
-  id: '/cookies/',
-  path: '/cookies/',
-  getParentRoute: () => homeLegalLayoutRoute,
-} as any)
-const authForgotPasswordSentPageRoute =
-  authForgotPasswordSentPageRouteImport.update({
-    id: '/forgot-password/sent/',
-    path: '/forgot-password/sent/',
-    getParentRoute: () => authLayoutRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
-  '/design': typeof DesignLayoutRouteWithChildren
-  '/calendar': typeof appCalendarLayoutRouteWithChildren
-  '/legal': typeof homeLegalLayoutRouteWithChildren
-  '/api/$': typeof ApiSplatRoute
-  '/': typeof homePageRoute
-  '/design/': typeof DesignPageLazyRoute
-  '/calendar/$': typeof appCalendarSplatRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
-  '/welcome/': typeof appWelcomePageRoute
-  '/forgot-password/': typeof authForgotPasswordPageRoute
-  '/reset-password/': typeof authResetPasswordPageRoute
-  '/signin/': typeof authSigninPageRoute
-  '/signup/': typeof authSignupPageRoute
-  '/verify-email/': typeof authVerifyEmailPageRoute
-  '/legal/': typeof homeLegalPageRoute
-  '/design/alert-dialog/': typeof DesignAlertDialogPageLazyRoute
-  '/design/alert/': typeof DesignAlertPageLazyRoute
-  '/design/avatar/': typeof DesignAvatarPageLazyRoute
-  '/design/badge/': typeof DesignBadgePageLazyRoute
-  '/design/button-group/': typeof DesignButtonGroupPageLazyRoute
-  '/design/button/': typeof DesignButtonPageLazyRoute
-  '/design/calendar/': typeof DesignCalendarPageLazyRoute
-  '/design/card/': typeof DesignCardPageLazyRoute
-  '/design/checkbox/': typeof DesignCheckboxPageLazyRoute
-  '/design/collapsible/': typeof DesignCollapsiblePageLazyRoute
-  '/design/combobox/': typeof DesignComboboxPageLazyRoute
-  '/design/dialog/': typeof DesignDialogPageLazyRoute
-  '/design/dropdown-menu/': typeof DesignDropdownMenuPageLazyRoute
-  '/design/empty/': typeof DesignEmptyPageLazyRoute
-  '/design/field/': typeof DesignFieldPageLazyRoute
-  '/design/input-group/': typeof DesignInputGroupPageLazyRoute
-  '/design/input/': typeof DesignInputPageLazyRoute
-  '/design/item/': typeof DesignItemPageLazyRoute
-  '/design/kbd/': typeof DesignKbdPageLazyRoute
-  '/design/label/': typeof DesignLabelPageLazyRoute
-  '/design/link/': typeof DesignLinkPageLazyRoute
-  '/design/native-select/': typeof DesignNativeSelectPageLazyRoute
-  '/design/popover/': typeof DesignPopoverPageLazyRoute
-  '/design/radio-group/': typeof DesignRadioGroupPageLazyRoute
-  '/design/select/': typeof DesignSelectPageLazyRoute
-  '/design/separator/': typeof DesignSeparatorPageLazyRoute
-  '/design/sheet/': typeof DesignSheetPageLazyRoute
-  '/design/sidebar/': typeof DesignSidebarPageLazyRoute
-  '/design/skeleton/': typeof DesignSkeletonPageLazyRoute
-  '/design/slider/': typeof DesignSliderPageLazyRoute
-  '/design/sonner/': typeof DesignSonnerPageLazyRoute
-  '/design/spinner/': typeof DesignSpinnerPageLazyRoute
-  '/design/switch/': typeof DesignSwitchPageLazyRoute
-  '/design/table/': typeof DesignTablePageLazyRoute
-  '/design/tabs/': typeof DesignTabsPageLazyRoute
-  '/design/textarea/': typeof DesignTextareaPageLazyRoute
-  '/design/tooltip/': typeof DesignTooltipPageLazyRoute
-  '/design/typography/': typeof DesignTypographyPageLazyRoute
-  '/forgot-password/sent/': typeof authForgotPasswordSentPageRoute
-  '/legal/cookies/': typeof homeLegalCookiesPageRoute
-  '/legal/privacy/': typeof homeLegalPrivacyPageRoute
-  '/legal/terms/': typeof homeLegalTermsPageRoute
+  '/': typeof PageLazyRoute
+  '/alert-dialog/': typeof AlertDialogPageLazyRoute
+  '/alert/': typeof AlertPageLazyRoute
+  '/avatar/': typeof AvatarPageLazyRoute
+  '/badge/': typeof BadgePageLazyRoute
+  '/button-group/': typeof ButtonGroupPageLazyRoute
+  '/button/': typeof ButtonPageLazyRoute
+  '/card/': typeof CardPageLazyRoute
+  '/checkbox/': typeof CheckboxPageLazyRoute
+  '/collapsible/': typeof CollapsiblePageLazyRoute
+  '/combobox/': typeof ComboboxPageLazyRoute
+  '/dialog/': typeof DialogPageLazyRoute
+  '/empty/': typeof EmptyPageLazyRoute
+  '/field/': typeof FieldPageLazyRoute
+  '/input-group/': typeof InputGroupPageLazyRoute
+  '/input/': typeof InputPageLazyRoute
+  '/item/': typeof ItemPageLazyRoute
+  '/kbd/': typeof KbdPageLazyRoute
+  '/link/': typeof LinkPageLazyRoute
+  '/native-select/': typeof NativeSelectPageLazyRoute
+  '/popover/': typeof PopoverPageLazyRoute
+  '/radio-group/': typeof RadioGroupPageLazyRoute
+  '/select/': typeof SelectPageLazyRoute
+  '/separator/': typeof SeparatorPageLazyRoute
+  '/sidebar/': typeof SidebarPageLazyRoute
+  '/skeleton/': typeof SkeletonPageLazyRoute
+  '/slider/': typeof SliderPageLazyRoute
+  '/sonner/': typeof SonnerPageLazyRoute
+  '/spinner/': typeof SpinnerPageLazyRoute
+  '/switch/': typeof SwitchPageLazyRoute
+  '/tabs/': typeof TabsPageLazyRoute
+  '/textarea/': typeof TextareaPageLazyRoute
+  '/tooltip/': typeof TooltipPageLazyRoute
+  '/typography/': typeof TypographyPageLazyRoute
 }
 export interface FileRoutesByTo {
-  '/calendar': typeof appCalendarLayoutRouteWithChildren
-  '/api/$': typeof ApiSplatRoute
-  '/': typeof homePageRoute
-  '/design': typeof DesignPageLazyRoute
-  '/calendar/$': typeof appCalendarSplatRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
-  '/welcome': typeof appWelcomePageRoute
-  '/forgot-password': typeof authForgotPasswordPageRoute
-  '/reset-password': typeof authResetPasswordPageRoute
-  '/signin': typeof authSigninPageRoute
-  '/signup': typeof authSignupPageRoute
-  '/verify-email': typeof authVerifyEmailPageRoute
-  '/legal': typeof homeLegalPageRoute
-  '/design/alert-dialog': typeof DesignAlertDialogPageLazyRoute
-  '/design/alert': typeof DesignAlertPageLazyRoute
-  '/design/avatar': typeof DesignAvatarPageLazyRoute
-  '/design/badge': typeof DesignBadgePageLazyRoute
-  '/design/button-group': typeof DesignButtonGroupPageLazyRoute
-  '/design/button': typeof DesignButtonPageLazyRoute
-  '/design/calendar': typeof DesignCalendarPageLazyRoute
-  '/design/card': typeof DesignCardPageLazyRoute
-  '/design/checkbox': typeof DesignCheckboxPageLazyRoute
-  '/design/collapsible': typeof DesignCollapsiblePageLazyRoute
-  '/design/combobox': typeof DesignComboboxPageLazyRoute
-  '/design/dialog': typeof DesignDialogPageLazyRoute
-  '/design/dropdown-menu': typeof DesignDropdownMenuPageLazyRoute
-  '/design/empty': typeof DesignEmptyPageLazyRoute
-  '/design/field': typeof DesignFieldPageLazyRoute
-  '/design/input-group': typeof DesignInputGroupPageLazyRoute
-  '/design/input': typeof DesignInputPageLazyRoute
-  '/design/item': typeof DesignItemPageLazyRoute
-  '/design/kbd': typeof DesignKbdPageLazyRoute
-  '/design/label': typeof DesignLabelPageLazyRoute
-  '/design/link': typeof DesignLinkPageLazyRoute
-  '/design/native-select': typeof DesignNativeSelectPageLazyRoute
-  '/design/popover': typeof DesignPopoverPageLazyRoute
-  '/design/radio-group': typeof DesignRadioGroupPageLazyRoute
-  '/design/select': typeof DesignSelectPageLazyRoute
-  '/design/separator': typeof DesignSeparatorPageLazyRoute
-  '/design/sheet': typeof DesignSheetPageLazyRoute
-  '/design/sidebar': typeof DesignSidebarPageLazyRoute
-  '/design/skeleton': typeof DesignSkeletonPageLazyRoute
-  '/design/slider': typeof DesignSliderPageLazyRoute
-  '/design/sonner': typeof DesignSonnerPageLazyRoute
-  '/design/spinner': typeof DesignSpinnerPageLazyRoute
-  '/design/switch': typeof DesignSwitchPageLazyRoute
-  '/design/table': typeof DesignTablePageLazyRoute
-  '/design/tabs': typeof DesignTabsPageLazyRoute
-  '/design/textarea': typeof DesignTextareaPageLazyRoute
-  '/design/tooltip': typeof DesignTooltipPageLazyRoute
-  '/design/typography': typeof DesignTypographyPageLazyRoute
-  '/forgot-password/sent': typeof authForgotPasswordSentPageRoute
-  '/legal/cookies': typeof homeLegalCookiesPageRoute
-  '/legal/privacy': typeof homeLegalPrivacyPageRoute
-  '/legal/terms': typeof homeLegalTermsPageRoute
+  '/': typeof PageLazyRoute
+  '/alert-dialog': typeof AlertDialogPageLazyRoute
+  '/alert': typeof AlertPageLazyRoute
+  '/avatar': typeof AvatarPageLazyRoute
+  '/badge': typeof BadgePageLazyRoute
+  '/button-group': typeof ButtonGroupPageLazyRoute
+  '/button': typeof ButtonPageLazyRoute
+  '/card': typeof CardPageLazyRoute
+  '/checkbox': typeof CheckboxPageLazyRoute
+  '/collapsible': typeof CollapsiblePageLazyRoute
+  '/combobox': typeof ComboboxPageLazyRoute
+  '/dialog': typeof DialogPageLazyRoute
+  '/empty': typeof EmptyPageLazyRoute
+  '/field': typeof FieldPageLazyRoute
+  '/input-group': typeof InputGroupPageLazyRoute
+  '/input': typeof InputPageLazyRoute
+  '/item': typeof ItemPageLazyRoute
+  '/kbd': typeof KbdPageLazyRoute
+  '/link': typeof LinkPageLazyRoute
+  '/native-select': typeof NativeSelectPageLazyRoute
+  '/popover': typeof PopoverPageLazyRoute
+  '/radio-group': typeof RadioGroupPageLazyRoute
+  '/select': typeof SelectPageLazyRoute
+  '/separator': typeof SeparatorPageLazyRoute
+  '/sidebar': typeof SidebarPageLazyRoute
+  '/skeleton': typeof SkeletonPageLazyRoute
+  '/slider': typeof SliderPageLazyRoute
+  '/sonner': typeof SonnerPageLazyRoute
+  '/spinner': typeof SpinnerPageLazyRoute
+  '/switch': typeof SwitchPageLazyRoute
+  '/tabs': typeof TabsPageLazyRoute
+  '/textarea': typeof TextareaPageLazyRoute
+  '/tooltip': typeof TooltipPageLazyRoute
+  '/typography': typeof TypographyPageLazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/(auth)': typeof authLayoutRouteWithChildren
-  '/design': typeof DesignLayoutRouteWithChildren
-  '/(app)/calendar': typeof appCalendarLayoutRouteWithChildren
-  '/(home)/legal': typeof homeLegalLayoutRouteWithChildren
-  '/api/$': typeof ApiSplatRoute
-  '/(home)/': typeof homePageRoute
-  '/design/': typeof DesignPageLazyRoute
-  '/(app)/calendar/$': typeof appCalendarSplatRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
-  '/(app)/welcome/': typeof appWelcomePageRoute
-  '/(auth)/forgot-password/': typeof authForgotPasswordPageRoute
-  '/(auth)/reset-password/': typeof authResetPasswordPageRoute
-  '/(auth)/signin/': typeof authSigninPageRoute
-  '/(auth)/signup/': typeof authSignupPageRoute
-  '/(auth)/verify-email/': typeof authVerifyEmailPageRoute
-  '/(home)/legal/': typeof homeLegalPageRoute
-  '/design/alert-dialog/': typeof DesignAlertDialogPageLazyRoute
-  '/design/alert/': typeof DesignAlertPageLazyRoute
-  '/design/avatar/': typeof DesignAvatarPageLazyRoute
-  '/design/badge/': typeof DesignBadgePageLazyRoute
-  '/design/button-group/': typeof DesignButtonGroupPageLazyRoute
-  '/design/button/': typeof DesignButtonPageLazyRoute
-  '/design/calendar/': typeof DesignCalendarPageLazyRoute
-  '/design/card/': typeof DesignCardPageLazyRoute
-  '/design/checkbox/': typeof DesignCheckboxPageLazyRoute
-  '/design/collapsible/': typeof DesignCollapsiblePageLazyRoute
-  '/design/combobox/': typeof DesignComboboxPageLazyRoute
-  '/design/dialog/': typeof DesignDialogPageLazyRoute
-  '/design/dropdown-menu/': typeof DesignDropdownMenuPageLazyRoute
-  '/design/empty/': typeof DesignEmptyPageLazyRoute
-  '/design/field/': typeof DesignFieldPageLazyRoute
-  '/design/input-group/': typeof DesignInputGroupPageLazyRoute
-  '/design/input/': typeof DesignInputPageLazyRoute
-  '/design/item/': typeof DesignItemPageLazyRoute
-  '/design/kbd/': typeof DesignKbdPageLazyRoute
-  '/design/label/': typeof DesignLabelPageLazyRoute
-  '/design/link/': typeof DesignLinkPageLazyRoute
-  '/design/native-select/': typeof DesignNativeSelectPageLazyRoute
-  '/design/popover/': typeof DesignPopoverPageLazyRoute
-  '/design/radio-group/': typeof DesignRadioGroupPageLazyRoute
-  '/design/select/': typeof DesignSelectPageLazyRoute
-  '/design/separator/': typeof DesignSeparatorPageLazyRoute
-  '/design/sheet/': typeof DesignSheetPageLazyRoute
-  '/design/sidebar/': typeof DesignSidebarPageLazyRoute
-  '/design/skeleton/': typeof DesignSkeletonPageLazyRoute
-  '/design/slider/': typeof DesignSliderPageLazyRoute
-  '/design/sonner/': typeof DesignSonnerPageLazyRoute
-  '/design/spinner/': typeof DesignSpinnerPageLazyRoute
-  '/design/switch/': typeof DesignSwitchPageLazyRoute
-  '/design/table/': typeof DesignTablePageLazyRoute
-  '/design/tabs/': typeof DesignTabsPageLazyRoute
-  '/design/textarea/': typeof DesignTextareaPageLazyRoute
-  '/design/tooltip/': typeof DesignTooltipPageLazyRoute
-  '/design/typography/': typeof DesignTypographyPageLazyRoute
-  '/(auth)/forgot-password/sent/': typeof authForgotPasswordSentPageRoute
-  '/(home)/legal/cookies/': typeof homeLegalCookiesPageRoute
-  '/(home)/legal/privacy/': typeof homeLegalPrivacyPageRoute
-  '/(home)/legal/terms/': typeof homeLegalTermsPageRoute
+  '/': typeof PageLazyRoute
+  '/alert-dialog/': typeof AlertDialogPageLazyRoute
+  '/alert/': typeof AlertPageLazyRoute
+  '/avatar/': typeof AvatarPageLazyRoute
+  '/badge/': typeof BadgePageLazyRoute
+  '/button-group/': typeof ButtonGroupPageLazyRoute
+  '/button/': typeof ButtonPageLazyRoute
+  '/card/': typeof CardPageLazyRoute
+  '/checkbox/': typeof CheckboxPageLazyRoute
+  '/collapsible/': typeof CollapsiblePageLazyRoute
+  '/combobox/': typeof ComboboxPageLazyRoute
+  '/dialog/': typeof DialogPageLazyRoute
+  '/empty/': typeof EmptyPageLazyRoute
+  '/field/': typeof FieldPageLazyRoute
+  '/input-group/': typeof InputGroupPageLazyRoute
+  '/input/': typeof InputPageLazyRoute
+  '/item/': typeof ItemPageLazyRoute
+  '/kbd/': typeof KbdPageLazyRoute
+  '/link/': typeof LinkPageLazyRoute
+  '/native-select/': typeof NativeSelectPageLazyRoute
+  '/popover/': typeof PopoverPageLazyRoute
+  '/radio-group/': typeof RadioGroupPageLazyRoute
+  '/select/': typeof SelectPageLazyRoute
+  '/separator/': typeof SeparatorPageLazyRoute
+  '/sidebar/': typeof SidebarPageLazyRoute
+  '/skeleton/': typeof SkeletonPageLazyRoute
+  '/slider/': typeof SliderPageLazyRoute
+  '/sonner/': typeof SonnerPageLazyRoute
+  '/spinner/': typeof SpinnerPageLazyRoute
+  '/switch/': typeof SwitchPageLazyRoute
+  '/tabs/': typeof TabsPageLazyRoute
+  '/textarea/': typeof TextareaPageLazyRoute
+  '/tooltip/': typeof TooltipPageLazyRoute
+  '/typography/': typeof TypographyPageLazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/design'
-    | '/calendar'
-    | '/legal'
-    | '/api/$'
     | '/'
-    | '/design/'
-    | '/calendar/$'
-    | '/api/auth/$'
-    | '/welcome/'
-    | '/forgot-password/'
-    | '/reset-password/'
-    | '/signin/'
-    | '/signup/'
-    | '/verify-email/'
-    | '/legal/'
-    | '/design/alert-dialog/'
-    | '/design/alert/'
-    | '/design/avatar/'
-    | '/design/badge/'
-    | '/design/button-group/'
-    | '/design/button/'
-    | '/design/calendar/'
-    | '/design/card/'
-    | '/design/checkbox/'
-    | '/design/collapsible/'
-    | '/design/combobox/'
-    | '/design/dialog/'
-    | '/design/dropdown-menu/'
-    | '/design/empty/'
-    | '/design/field/'
-    | '/design/input-group/'
-    | '/design/input/'
-    | '/design/item/'
-    | '/design/kbd/'
-    | '/design/label/'
-    | '/design/link/'
-    | '/design/native-select/'
-    | '/design/popover/'
-    | '/design/radio-group/'
-    | '/design/select/'
-    | '/design/separator/'
-    | '/design/sheet/'
-    | '/design/sidebar/'
-    | '/design/skeleton/'
-    | '/design/slider/'
-    | '/design/sonner/'
-    | '/design/spinner/'
-    | '/design/switch/'
-    | '/design/table/'
-    | '/design/tabs/'
-    | '/design/textarea/'
-    | '/design/tooltip/'
-    | '/design/typography/'
-    | '/forgot-password/sent/'
-    | '/legal/cookies/'
-    | '/legal/privacy/'
-    | '/legal/terms/'
+    | '/alert-dialog/'
+    | '/alert/'
+    | '/avatar/'
+    | '/badge/'
+    | '/button-group/'
+    | '/button/'
+    | '/card/'
+    | '/checkbox/'
+    | '/collapsible/'
+    | '/combobox/'
+    | '/dialog/'
+    | '/empty/'
+    | '/field/'
+    | '/input-group/'
+    | '/input/'
+    | '/item/'
+    | '/kbd/'
+    | '/link/'
+    | '/native-select/'
+    | '/popover/'
+    | '/radio-group/'
+    | '/select/'
+    | '/separator/'
+    | '/sidebar/'
+    | '/skeleton/'
+    | '/slider/'
+    | '/sonner/'
+    | '/spinner/'
+    | '/switch/'
+    | '/tabs/'
+    | '/textarea/'
+    | '/tooltip/'
+    | '/typography/'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/calendar'
-    | '/api/$'
     | '/'
-    | '/design'
-    | '/calendar/$'
-    | '/api/auth/$'
-    | '/welcome'
-    | '/forgot-password'
-    | '/reset-password'
-    | '/signin'
-    | '/signup'
-    | '/verify-email'
-    | '/legal'
-    | '/design/alert-dialog'
-    | '/design/alert'
-    | '/design/avatar'
-    | '/design/badge'
-    | '/design/button-group'
-    | '/design/button'
-    | '/design/calendar'
-    | '/design/card'
-    | '/design/checkbox'
-    | '/design/collapsible'
-    | '/design/combobox'
-    | '/design/dialog'
-    | '/design/dropdown-menu'
-    | '/design/empty'
-    | '/design/field'
-    | '/design/input-group'
-    | '/design/input'
-    | '/design/item'
-    | '/design/kbd'
-    | '/design/label'
-    | '/design/link'
-    | '/design/native-select'
-    | '/design/popover'
-    | '/design/radio-group'
-    | '/design/select'
-    | '/design/separator'
-    | '/design/sheet'
-    | '/design/sidebar'
-    | '/design/skeleton'
-    | '/design/slider'
-    | '/design/sonner'
-    | '/design/spinner'
-    | '/design/switch'
-    | '/design/table'
-    | '/design/tabs'
-    | '/design/textarea'
-    | '/design/tooltip'
-    | '/design/typography'
-    | '/forgot-password/sent'
-    | '/legal/cookies'
-    | '/legal/privacy'
-    | '/legal/terms'
+    | '/alert-dialog'
+    | '/alert'
+    | '/avatar'
+    | '/badge'
+    | '/button-group'
+    | '/button'
+    | '/card'
+    | '/checkbox'
+    | '/collapsible'
+    | '/combobox'
+    | '/dialog'
+    | '/empty'
+    | '/field'
+    | '/input-group'
+    | '/input'
+    | '/item'
+    | '/kbd'
+    | '/link'
+    | '/native-select'
+    | '/popover'
+    | '/radio-group'
+    | '/select'
+    | '/separator'
+    | '/sidebar'
+    | '/skeleton'
+    | '/slider'
+    | '/sonner'
+    | '/spinner'
+    | '/switch'
+    | '/tabs'
+    | '/textarea'
+    | '/tooltip'
+    | '/typography'
   id:
     | '__root__'
-    | '/(auth)'
-    | '/design'
-    | '/(app)/calendar'
-    | '/(home)/legal'
-    | '/api/$'
-    | '/(home)/'
-    | '/design/'
-    | '/(app)/calendar/$'
-    | '/api/auth/$'
-    | '/(app)/welcome/'
-    | '/(auth)/forgot-password/'
-    | '/(auth)/reset-password/'
-    | '/(auth)/signin/'
-    | '/(auth)/signup/'
-    | '/(auth)/verify-email/'
-    | '/(home)/legal/'
-    | '/design/alert-dialog/'
-    | '/design/alert/'
-    | '/design/avatar/'
-    | '/design/badge/'
-    | '/design/button-group/'
-    | '/design/button/'
-    | '/design/calendar/'
-    | '/design/card/'
-    | '/design/checkbox/'
-    | '/design/collapsible/'
-    | '/design/combobox/'
-    | '/design/dialog/'
-    | '/design/dropdown-menu/'
-    | '/design/empty/'
-    | '/design/field/'
-    | '/design/input-group/'
-    | '/design/input/'
-    | '/design/item/'
-    | '/design/kbd/'
-    | '/design/label/'
-    | '/design/link/'
-    | '/design/native-select/'
-    | '/design/popover/'
-    | '/design/radio-group/'
-    | '/design/select/'
-    | '/design/separator/'
-    | '/design/sheet/'
-    | '/design/sidebar/'
-    | '/design/skeleton/'
-    | '/design/slider/'
-    | '/design/sonner/'
-    | '/design/spinner/'
-    | '/design/switch/'
-    | '/design/table/'
-    | '/design/tabs/'
-    | '/design/textarea/'
-    | '/design/tooltip/'
-    | '/design/typography/'
-    | '/(auth)/forgot-password/sent/'
-    | '/(home)/legal/cookies/'
-    | '/(home)/legal/privacy/'
-    | '/(home)/legal/terms/'
+    | '/'
+    | '/alert-dialog/'
+    | '/alert/'
+    | '/avatar/'
+    | '/badge/'
+    | '/button-group/'
+    | '/button/'
+    | '/card/'
+    | '/checkbox/'
+    | '/collapsible/'
+    | '/combobox/'
+    | '/dialog/'
+    | '/empty/'
+    | '/field/'
+    | '/input-group/'
+    | '/input/'
+    | '/item/'
+    | '/kbd/'
+    | '/link/'
+    | '/native-select/'
+    | '/popover/'
+    | '/radio-group/'
+    | '/select/'
+    | '/separator/'
+    | '/sidebar/'
+    | '/skeleton/'
+    | '/slider/'
+    | '/sonner/'
+    | '/spinner/'
+    | '/switch/'
+    | '/tabs/'
+    | '/textarea/'
+    | '/tooltip/'
+    | '/typography/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  authLayoutRoute: typeof authLayoutRouteWithChildren
-  DesignLayoutRoute: typeof DesignLayoutRouteWithChildren
-  appCalendarLayoutRoute: typeof appCalendarLayoutRouteWithChildren
-  homeLegalLayoutRoute: typeof homeLegalLayoutRouteWithChildren
-  ApiSplatRoute: typeof ApiSplatRoute
-  homePageRoute: typeof homePageRoute
-  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
-  appWelcomePageRoute: typeof appWelcomePageRoute
+  PageLazyRoute: typeof PageLazyRoute
+  AlertDialogPageLazyRoute: typeof AlertDialogPageLazyRoute
+  AlertPageLazyRoute: typeof AlertPageLazyRoute
+  AvatarPageLazyRoute: typeof AvatarPageLazyRoute
+  BadgePageLazyRoute: typeof BadgePageLazyRoute
+  ButtonGroupPageLazyRoute: typeof ButtonGroupPageLazyRoute
+  ButtonPageLazyRoute: typeof ButtonPageLazyRoute
+  CardPageLazyRoute: typeof CardPageLazyRoute
+  CheckboxPageLazyRoute: typeof CheckboxPageLazyRoute
+  CollapsiblePageLazyRoute: typeof CollapsiblePageLazyRoute
+  ComboboxPageLazyRoute: typeof ComboboxPageLazyRoute
+  DialogPageLazyRoute: typeof DialogPageLazyRoute
+  EmptyPageLazyRoute: typeof EmptyPageLazyRoute
+  FieldPageLazyRoute: typeof FieldPageLazyRoute
+  InputGroupPageLazyRoute: typeof InputGroupPageLazyRoute
+  InputPageLazyRoute: typeof InputPageLazyRoute
+  ItemPageLazyRoute: typeof ItemPageLazyRoute
+  KbdPageLazyRoute: typeof KbdPageLazyRoute
+  LinkPageLazyRoute: typeof LinkPageLazyRoute
+  NativeSelectPageLazyRoute: typeof NativeSelectPageLazyRoute
+  PopoverPageLazyRoute: typeof PopoverPageLazyRoute
+  RadioGroupPageLazyRoute: typeof RadioGroupPageLazyRoute
+  SelectPageLazyRoute: typeof SelectPageLazyRoute
+  SeparatorPageLazyRoute: typeof SeparatorPageLazyRoute
+  SidebarPageLazyRoute: typeof SidebarPageLazyRoute
+  SkeletonPageLazyRoute: typeof SkeletonPageLazyRoute
+  SliderPageLazyRoute: typeof SliderPageLazyRoute
+  SonnerPageLazyRoute: typeof SonnerPageLazyRoute
+  SpinnerPageLazyRoute: typeof SpinnerPageLazyRoute
+  SwitchPageLazyRoute: typeof SwitchPageLazyRoute
+  TabsPageLazyRoute: typeof TabsPageLazyRoute
+  TextareaPageLazyRoute: typeof TextareaPageLazyRoute
+  TooltipPageLazyRoute: typeof TooltipPageLazyRoute
+  TypographyPageLazyRoute: typeof TypographyPageLazyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/design': {
-      id: '/design'
-      path: '/design'
-      fullPath: '/design'
-      preLoaderRoute: typeof DesignLayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/(auth)': {
-      id: '/(auth)'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof authLayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/design/': {
-      id: '/design/'
-      path: '/'
-      fullPath: '/design/'
-      preLoaderRoute: typeof DesignPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/(home)/': {
-      id: '/(home)/'
+    '/': {
+      id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof homePageRouteImport
+      preLoaderRoute: typeof PageLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/$': {
-      id: '/api/$'
-      path: '/api/$'
-      fullPath: '/api/$'
-      preLoaderRoute: typeof ApiSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/(home)/legal': {
-      id: '/(home)/legal'
-      path: '/legal'
-      fullPath: '/legal'
-      preLoaderRoute: typeof homeLegalLayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/(app)/calendar': {
-      id: '/(app)/calendar'
-      path: '/calendar'
-      fullPath: '/calendar'
-      preLoaderRoute: typeof appCalendarLayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/design/typography/': {
-      id: '/design/typography/'
+    '/typography/': {
+      id: '/typography/'
       path: '/typography'
-      fullPath: '/design/typography/'
-      preLoaderRoute: typeof DesignTypographyPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/typography/'
+      preLoaderRoute: typeof TypographyPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/tooltip/': {
-      id: '/design/tooltip/'
+    '/tooltip/': {
+      id: '/tooltip/'
       path: '/tooltip'
-      fullPath: '/design/tooltip/'
-      preLoaderRoute: typeof DesignTooltipPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/tooltip/'
+      preLoaderRoute: typeof TooltipPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/textarea/': {
-      id: '/design/textarea/'
+    '/textarea/': {
+      id: '/textarea/'
       path: '/textarea'
-      fullPath: '/design/textarea/'
-      preLoaderRoute: typeof DesignTextareaPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/textarea/'
+      preLoaderRoute: typeof TextareaPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/tabs/': {
-      id: '/design/tabs/'
+    '/tabs/': {
+      id: '/tabs/'
       path: '/tabs'
-      fullPath: '/design/tabs/'
-      preLoaderRoute: typeof DesignTabsPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/tabs/'
+      preLoaderRoute: typeof TabsPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/table/': {
-      id: '/design/table/'
-      path: '/table'
-      fullPath: '/design/table/'
-      preLoaderRoute: typeof DesignTablePageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/design/switch/': {
-      id: '/design/switch/'
+    '/switch/': {
+      id: '/switch/'
       path: '/switch'
-      fullPath: '/design/switch/'
-      preLoaderRoute: typeof DesignSwitchPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/switch/'
+      preLoaderRoute: typeof SwitchPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/spinner/': {
-      id: '/design/spinner/'
+    '/spinner/': {
+      id: '/spinner/'
       path: '/spinner'
-      fullPath: '/design/spinner/'
-      preLoaderRoute: typeof DesignSpinnerPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/spinner/'
+      preLoaderRoute: typeof SpinnerPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/sonner/': {
-      id: '/design/sonner/'
+    '/sonner/': {
+      id: '/sonner/'
       path: '/sonner'
-      fullPath: '/design/sonner/'
-      preLoaderRoute: typeof DesignSonnerPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/sonner/'
+      preLoaderRoute: typeof SonnerPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/slider/': {
-      id: '/design/slider/'
+    '/slider/': {
+      id: '/slider/'
       path: '/slider'
-      fullPath: '/design/slider/'
-      preLoaderRoute: typeof DesignSliderPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/slider/'
+      preLoaderRoute: typeof SliderPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/skeleton/': {
-      id: '/design/skeleton/'
+    '/skeleton/': {
+      id: '/skeleton/'
       path: '/skeleton'
-      fullPath: '/design/skeleton/'
-      preLoaderRoute: typeof DesignSkeletonPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/skeleton/'
+      preLoaderRoute: typeof SkeletonPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/sidebar/': {
-      id: '/design/sidebar/'
+    '/sidebar/': {
+      id: '/sidebar/'
       path: '/sidebar'
-      fullPath: '/design/sidebar/'
-      preLoaderRoute: typeof DesignSidebarPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/sidebar/'
+      preLoaderRoute: typeof SidebarPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/sheet/': {
-      id: '/design/sheet/'
-      path: '/sheet'
-      fullPath: '/design/sheet/'
-      preLoaderRoute: typeof DesignSheetPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/design/separator/': {
-      id: '/design/separator/'
+    '/separator/': {
+      id: '/separator/'
       path: '/separator'
-      fullPath: '/design/separator/'
-      preLoaderRoute: typeof DesignSeparatorPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/separator/'
+      preLoaderRoute: typeof SeparatorPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/select/': {
-      id: '/design/select/'
+    '/select/': {
+      id: '/select/'
       path: '/select'
-      fullPath: '/design/select/'
-      preLoaderRoute: typeof DesignSelectPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/select/'
+      preLoaderRoute: typeof SelectPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/radio-group/': {
-      id: '/design/radio-group/'
+    '/radio-group/': {
+      id: '/radio-group/'
       path: '/radio-group'
-      fullPath: '/design/radio-group/'
-      preLoaderRoute: typeof DesignRadioGroupPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/radio-group/'
+      preLoaderRoute: typeof RadioGroupPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/popover/': {
-      id: '/design/popover/'
+    '/popover/': {
+      id: '/popover/'
       path: '/popover'
-      fullPath: '/design/popover/'
-      preLoaderRoute: typeof DesignPopoverPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/popover/'
+      preLoaderRoute: typeof PopoverPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/native-select/': {
-      id: '/design/native-select/'
+    '/native-select/': {
+      id: '/native-select/'
       path: '/native-select'
-      fullPath: '/design/native-select/'
-      preLoaderRoute: typeof DesignNativeSelectPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/native-select/'
+      preLoaderRoute: typeof NativeSelectPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/link/': {
-      id: '/design/link/'
+    '/link/': {
+      id: '/link/'
       path: '/link'
-      fullPath: '/design/link/'
-      preLoaderRoute: typeof DesignLinkPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/link/'
+      preLoaderRoute: typeof LinkPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/label/': {
-      id: '/design/label/'
-      path: '/label'
-      fullPath: '/design/label/'
-      preLoaderRoute: typeof DesignLabelPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/design/kbd/': {
-      id: '/design/kbd/'
+    '/kbd/': {
+      id: '/kbd/'
       path: '/kbd'
-      fullPath: '/design/kbd/'
-      preLoaderRoute: typeof DesignKbdPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/kbd/'
+      preLoaderRoute: typeof KbdPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/item/': {
-      id: '/design/item/'
+    '/item/': {
+      id: '/item/'
       path: '/item'
-      fullPath: '/design/item/'
-      preLoaderRoute: typeof DesignItemPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/item/'
+      preLoaderRoute: typeof ItemPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/input/': {
-      id: '/design/input/'
+    '/input/': {
+      id: '/input/'
       path: '/input'
-      fullPath: '/design/input/'
-      preLoaderRoute: typeof DesignInputPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/input/'
+      preLoaderRoute: typeof InputPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/input-group/': {
-      id: '/design/input-group/'
+    '/input-group/': {
+      id: '/input-group/'
       path: '/input-group'
-      fullPath: '/design/input-group/'
-      preLoaderRoute: typeof DesignInputGroupPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/input-group/'
+      preLoaderRoute: typeof InputGroupPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/field/': {
-      id: '/design/field/'
+    '/field/': {
+      id: '/field/'
       path: '/field'
-      fullPath: '/design/field/'
-      preLoaderRoute: typeof DesignFieldPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/field/'
+      preLoaderRoute: typeof FieldPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/empty/': {
-      id: '/design/empty/'
+    '/empty/': {
+      id: '/empty/'
       path: '/empty'
-      fullPath: '/design/empty/'
-      preLoaderRoute: typeof DesignEmptyPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/empty/'
+      preLoaderRoute: typeof EmptyPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/dropdown-menu/': {
-      id: '/design/dropdown-menu/'
-      path: '/dropdown-menu'
-      fullPath: '/design/dropdown-menu/'
-      preLoaderRoute: typeof DesignDropdownMenuPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/design/dialog/': {
-      id: '/design/dialog/'
+    '/dialog/': {
+      id: '/dialog/'
       path: '/dialog'
-      fullPath: '/design/dialog/'
-      preLoaderRoute: typeof DesignDialogPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/dialog/'
+      preLoaderRoute: typeof DialogPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/combobox/': {
-      id: '/design/combobox/'
+    '/combobox/': {
+      id: '/combobox/'
       path: '/combobox'
-      fullPath: '/design/combobox/'
-      preLoaderRoute: typeof DesignComboboxPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/combobox/'
+      preLoaderRoute: typeof ComboboxPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/collapsible/': {
-      id: '/design/collapsible/'
+    '/collapsible/': {
+      id: '/collapsible/'
       path: '/collapsible'
-      fullPath: '/design/collapsible/'
-      preLoaderRoute: typeof DesignCollapsiblePageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/collapsible/'
+      preLoaderRoute: typeof CollapsiblePageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/checkbox/': {
-      id: '/design/checkbox/'
+    '/checkbox/': {
+      id: '/checkbox/'
       path: '/checkbox'
-      fullPath: '/design/checkbox/'
-      preLoaderRoute: typeof DesignCheckboxPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/checkbox/'
+      preLoaderRoute: typeof CheckboxPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/card/': {
-      id: '/design/card/'
+    '/card/': {
+      id: '/card/'
       path: '/card'
-      fullPath: '/design/card/'
-      preLoaderRoute: typeof DesignCardPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/card/'
+      preLoaderRoute: typeof CardPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/calendar/': {
-      id: '/design/calendar/'
-      path: '/calendar'
-      fullPath: '/design/calendar/'
-      preLoaderRoute: typeof DesignCalendarPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/design/button/': {
-      id: '/design/button/'
+    '/button/': {
+      id: '/button/'
       path: '/button'
-      fullPath: '/design/button/'
-      preLoaderRoute: typeof DesignButtonPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/button/'
+      preLoaderRoute: typeof ButtonPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/button-group/': {
-      id: '/design/button-group/'
+    '/button-group/': {
+      id: '/button-group/'
       path: '/button-group'
-      fullPath: '/design/button-group/'
-      preLoaderRoute: typeof DesignButtonGroupPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/button-group/'
+      preLoaderRoute: typeof ButtonGroupPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/badge/': {
-      id: '/design/badge/'
+    '/badge/': {
+      id: '/badge/'
       path: '/badge'
-      fullPath: '/design/badge/'
-      preLoaderRoute: typeof DesignBadgePageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/badge/'
+      preLoaderRoute: typeof BadgePageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/avatar/': {
-      id: '/design/avatar/'
+    '/avatar/': {
+      id: '/avatar/'
       path: '/avatar'
-      fullPath: '/design/avatar/'
-      preLoaderRoute: typeof DesignAvatarPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/avatar/'
+      preLoaderRoute: typeof AvatarPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/alert/': {
-      id: '/design/alert/'
+    '/alert/': {
+      id: '/alert/'
       path: '/alert'
-      fullPath: '/design/alert/'
-      preLoaderRoute: typeof DesignAlertPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
+      fullPath: '/alert/'
+      preLoaderRoute: typeof AlertPageLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/design/alert-dialog/': {
-      id: '/design/alert-dialog/'
+    '/alert-dialog/': {
+      id: '/alert-dialog/'
       path: '/alert-dialog'
-      fullPath: '/design/alert-dialog/'
-      preLoaderRoute: typeof DesignAlertDialogPageLazyRouteImport
-      parentRoute: typeof DesignLayoutRoute
-    }
-    '/(home)/legal/': {
-      id: '/(home)/legal/'
-      path: '/'
-      fullPath: '/legal/'
-      preLoaderRoute: typeof homeLegalPageRouteImport
-      parentRoute: typeof homeLegalLayoutRoute
-    }
-    '/(auth)/verify-email/': {
-      id: '/(auth)/verify-email/'
-      path: '/verify-email'
-      fullPath: '/verify-email/'
-      preLoaderRoute: typeof authVerifyEmailPageRouteImport
-      parentRoute: typeof authLayoutRoute
-    }
-    '/(auth)/signup/': {
-      id: '/(auth)/signup/'
-      path: '/signup'
-      fullPath: '/signup/'
-      preLoaderRoute: typeof authSignupPageRouteImport
-      parentRoute: typeof authLayoutRoute
-    }
-    '/(auth)/signin/': {
-      id: '/(auth)/signin/'
-      path: '/signin'
-      fullPath: '/signin/'
-      preLoaderRoute: typeof authSigninPageRouteImport
-      parentRoute: typeof authLayoutRoute
-    }
-    '/(auth)/reset-password/': {
-      id: '/(auth)/reset-password/'
-      path: '/reset-password'
-      fullPath: '/reset-password/'
-      preLoaderRoute: typeof authResetPasswordPageRouteImport
-      parentRoute: typeof authLayoutRoute
-    }
-    '/(auth)/forgot-password/': {
-      id: '/(auth)/forgot-password/'
-      path: '/forgot-password'
-      fullPath: '/forgot-password/'
-      preLoaderRoute: typeof authForgotPasswordPageRouteImport
-      parentRoute: typeof authLayoutRoute
-    }
-    '/(app)/welcome/': {
-      id: '/(app)/welcome/'
-      path: '/welcome'
-      fullPath: '/welcome/'
-      preLoaderRoute: typeof appWelcomePageRouteImport
+      fullPath: '/alert-dialog/'
+      preLoaderRoute: typeof AlertDialogPageLazyRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/api/auth/$': {
-      id: '/api/auth/$'
-      path: '/api/auth/$'
-      fullPath: '/api/auth/$'
-      preLoaderRoute: typeof ApiAuthSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/(app)/calendar/$': {
-      id: '/(app)/calendar/$'
-      path: '/$'
-      fullPath: '/calendar/$'
-      preLoaderRoute: typeof appCalendarSplatRouteImport
-      parentRoute: typeof appCalendarLayoutRoute
-    }
-    '/(home)/legal/terms/': {
-      id: '/(home)/legal/terms/'
-      path: '/terms'
-      fullPath: '/legal/terms/'
-      preLoaderRoute: typeof homeLegalTermsPageRouteImport
-      parentRoute: typeof homeLegalLayoutRoute
-    }
-    '/(home)/legal/privacy/': {
-      id: '/(home)/legal/privacy/'
-      path: '/privacy'
-      fullPath: '/legal/privacy/'
-      preLoaderRoute: typeof homeLegalPrivacyPageRouteImport
-      parentRoute: typeof homeLegalLayoutRoute
-    }
-    '/(home)/legal/cookies/': {
-      id: '/(home)/legal/cookies/'
-      path: '/cookies'
-      fullPath: '/legal/cookies/'
-      preLoaderRoute: typeof homeLegalCookiesPageRouteImport
-      parentRoute: typeof homeLegalLayoutRoute
-    }
-    '/(auth)/forgot-password/sent/': {
-      id: '/(auth)/forgot-password/sent/'
-      path: '/forgot-password/sent'
-      fullPath: '/forgot-password/sent/'
-      preLoaderRoute: typeof authForgotPasswordSentPageRouteImport
-      parentRoute: typeof authLayoutRoute
     }
   }
 }
 
-interface authLayoutRouteChildren {
-  authForgotPasswordPageRoute: typeof authForgotPasswordPageRoute
-  authResetPasswordPageRoute: typeof authResetPasswordPageRoute
-  authSigninPageRoute: typeof authSigninPageRoute
-  authSignupPageRoute: typeof authSignupPageRoute
-  authVerifyEmailPageRoute: typeof authVerifyEmailPageRoute
-  authForgotPasswordSentPageRoute: typeof authForgotPasswordSentPageRoute
-}
-
-const authLayoutRouteChildren: authLayoutRouteChildren = {
-  authForgotPasswordPageRoute: authForgotPasswordPageRoute,
-  authResetPasswordPageRoute: authResetPasswordPageRoute,
-  authSigninPageRoute: authSigninPageRoute,
-  authSignupPageRoute: authSignupPageRoute,
-  authVerifyEmailPageRoute: authVerifyEmailPageRoute,
-  authForgotPasswordSentPageRoute: authForgotPasswordSentPageRoute,
-}
-
-const authLayoutRouteWithChildren = authLayoutRoute._addFileChildren(
-  authLayoutRouteChildren,
-)
-
-interface DesignLayoutRouteChildren {
-  DesignPageLazyRoute: typeof DesignPageLazyRoute
-  DesignAlertDialogPageLazyRoute: typeof DesignAlertDialogPageLazyRoute
-  DesignAlertPageLazyRoute: typeof DesignAlertPageLazyRoute
-  DesignAvatarPageLazyRoute: typeof DesignAvatarPageLazyRoute
-  DesignBadgePageLazyRoute: typeof DesignBadgePageLazyRoute
-  DesignButtonGroupPageLazyRoute: typeof DesignButtonGroupPageLazyRoute
-  DesignButtonPageLazyRoute: typeof DesignButtonPageLazyRoute
-  DesignCalendarPageLazyRoute: typeof DesignCalendarPageLazyRoute
-  DesignCardPageLazyRoute: typeof DesignCardPageLazyRoute
-  DesignCheckboxPageLazyRoute: typeof DesignCheckboxPageLazyRoute
-  DesignCollapsiblePageLazyRoute: typeof DesignCollapsiblePageLazyRoute
-  DesignComboboxPageLazyRoute: typeof DesignComboboxPageLazyRoute
-  DesignDialogPageLazyRoute: typeof DesignDialogPageLazyRoute
-  DesignDropdownMenuPageLazyRoute: typeof DesignDropdownMenuPageLazyRoute
-  DesignEmptyPageLazyRoute: typeof DesignEmptyPageLazyRoute
-  DesignFieldPageLazyRoute: typeof DesignFieldPageLazyRoute
-  DesignInputGroupPageLazyRoute: typeof DesignInputGroupPageLazyRoute
-  DesignInputPageLazyRoute: typeof DesignInputPageLazyRoute
-  DesignItemPageLazyRoute: typeof DesignItemPageLazyRoute
-  DesignKbdPageLazyRoute: typeof DesignKbdPageLazyRoute
-  DesignLabelPageLazyRoute: typeof DesignLabelPageLazyRoute
-  DesignLinkPageLazyRoute: typeof DesignLinkPageLazyRoute
-  DesignNativeSelectPageLazyRoute: typeof DesignNativeSelectPageLazyRoute
-  DesignPopoverPageLazyRoute: typeof DesignPopoverPageLazyRoute
-  DesignRadioGroupPageLazyRoute: typeof DesignRadioGroupPageLazyRoute
-  DesignSelectPageLazyRoute: typeof DesignSelectPageLazyRoute
-  DesignSeparatorPageLazyRoute: typeof DesignSeparatorPageLazyRoute
-  DesignSheetPageLazyRoute: typeof DesignSheetPageLazyRoute
-  DesignSidebarPageLazyRoute: typeof DesignSidebarPageLazyRoute
-  DesignSkeletonPageLazyRoute: typeof DesignSkeletonPageLazyRoute
-  DesignSliderPageLazyRoute: typeof DesignSliderPageLazyRoute
-  DesignSonnerPageLazyRoute: typeof DesignSonnerPageLazyRoute
-  DesignSpinnerPageLazyRoute: typeof DesignSpinnerPageLazyRoute
-  DesignSwitchPageLazyRoute: typeof DesignSwitchPageLazyRoute
-  DesignTablePageLazyRoute: typeof DesignTablePageLazyRoute
-  DesignTabsPageLazyRoute: typeof DesignTabsPageLazyRoute
-  DesignTextareaPageLazyRoute: typeof DesignTextareaPageLazyRoute
-  DesignTooltipPageLazyRoute: typeof DesignTooltipPageLazyRoute
-  DesignTypographyPageLazyRoute: typeof DesignTypographyPageLazyRoute
-}
-
-const DesignLayoutRouteChildren: DesignLayoutRouteChildren = {
-  DesignPageLazyRoute: DesignPageLazyRoute,
-  DesignAlertDialogPageLazyRoute: DesignAlertDialogPageLazyRoute,
-  DesignAlertPageLazyRoute: DesignAlertPageLazyRoute,
-  DesignAvatarPageLazyRoute: DesignAvatarPageLazyRoute,
-  DesignBadgePageLazyRoute: DesignBadgePageLazyRoute,
-  DesignButtonGroupPageLazyRoute: DesignButtonGroupPageLazyRoute,
-  DesignButtonPageLazyRoute: DesignButtonPageLazyRoute,
-  DesignCalendarPageLazyRoute: DesignCalendarPageLazyRoute,
-  DesignCardPageLazyRoute: DesignCardPageLazyRoute,
-  DesignCheckboxPageLazyRoute: DesignCheckboxPageLazyRoute,
-  DesignCollapsiblePageLazyRoute: DesignCollapsiblePageLazyRoute,
-  DesignComboboxPageLazyRoute: DesignComboboxPageLazyRoute,
-  DesignDialogPageLazyRoute: DesignDialogPageLazyRoute,
-  DesignDropdownMenuPageLazyRoute: DesignDropdownMenuPageLazyRoute,
-  DesignEmptyPageLazyRoute: DesignEmptyPageLazyRoute,
-  DesignFieldPageLazyRoute: DesignFieldPageLazyRoute,
-  DesignInputGroupPageLazyRoute: DesignInputGroupPageLazyRoute,
-  DesignInputPageLazyRoute: DesignInputPageLazyRoute,
-  DesignItemPageLazyRoute: DesignItemPageLazyRoute,
-  DesignKbdPageLazyRoute: DesignKbdPageLazyRoute,
-  DesignLabelPageLazyRoute: DesignLabelPageLazyRoute,
-  DesignLinkPageLazyRoute: DesignLinkPageLazyRoute,
-  DesignNativeSelectPageLazyRoute: DesignNativeSelectPageLazyRoute,
-  DesignPopoverPageLazyRoute: DesignPopoverPageLazyRoute,
-  DesignRadioGroupPageLazyRoute: DesignRadioGroupPageLazyRoute,
-  DesignSelectPageLazyRoute: DesignSelectPageLazyRoute,
-  DesignSeparatorPageLazyRoute: DesignSeparatorPageLazyRoute,
-  DesignSheetPageLazyRoute: DesignSheetPageLazyRoute,
-  DesignSidebarPageLazyRoute: DesignSidebarPageLazyRoute,
-  DesignSkeletonPageLazyRoute: DesignSkeletonPageLazyRoute,
-  DesignSliderPageLazyRoute: DesignSliderPageLazyRoute,
-  DesignSonnerPageLazyRoute: DesignSonnerPageLazyRoute,
-  DesignSpinnerPageLazyRoute: DesignSpinnerPageLazyRoute,
-  DesignSwitchPageLazyRoute: DesignSwitchPageLazyRoute,
-  DesignTablePageLazyRoute: DesignTablePageLazyRoute,
-  DesignTabsPageLazyRoute: DesignTabsPageLazyRoute,
-  DesignTextareaPageLazyRoute: DesignTextareaPageLazyRoute,
-  DesignTooltipPageLazyRoute: DesignTooltipPageLazyRoute,
-  DesignTypographyPageLazyRoute: DesignTypographyPageLazyRoute,
-}
-
-const DesignLayoutRouteWithChildren = DesignLayoutRoute._addFileChildren(
-  DesignLayoutRouteChildren,
-)
-
-interface appCalendarLayoutRouteChildren {
-  appCalendarSplatRoute: typeof appCalendarSplatRoute
-}
-
-const appCalendarLayoutRouteChildren: appCalendarLayoutRouteChildren = {
-  appCalendarSplatRoute: appCalendarSplatRoute,
-}
-
-const appCalendarLayoutRouteWithChildren =
-  appCalendarLayoutRoute._addFileChildren(appCalendarLayoutRouteChildren)
-
-interface homeLegalLayoutRouteChildren {
-  homeLegalPageRoute: typeof homeLegalPageRoute
-  homeLegalCookiesPageRoute: typeof homeLegalCookiesPageRoute
-  homeLegalPrivacyPageRoute: typeof homeLegalPrivacyPageRoute
-  homeLegalTermsPageRoute: typeof homeLegalTermsPageRoute
-}
-
-const homeLegalLayoutRouteChildren: homeLegalLayoutRouteChildren = {
-  homeLegalPageRoute: homeLegalPageRoute,
-  homeLegalCookiesPageRoute: homeLegalCookiesPageRoute,
-  homeLegalPrivacyPageRoute: homeLegalPrivacyPageRoute,
-  homeLegalTermsPageRoute: homeLegalTermsPageRoute,
-}
-
-const homeLegalLayoutRouteWithChildren = homeLegalLayoutRoute._addFileChildren(
-  homeLegalLayoutRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
-  authLayoutRoute: authLayoutRouteWithChildren,
-  DesignLayoutRoute: DesignLayoutRouteWithChildren,
-  appCalendarLayoutRoute: appCalendarLayoutRouteWithChildren,
-  homeLegalLayoutRoute: homeLegalLayoutRouteWithChildren,
-  ApiSplatRoute: ApiSplatRoute,
-  homePageRoute: homePageRoute,
-  ApiAuthSplatRoute: ApiAuthSplatRoute,
-  appWelcomePageRoute: appWelcomePageRoute,
+  PageLazyRoute: PageLazyRoute,
+  AlertDialogPageLazyRoute: AlertDialogPageLazyRoute,
+  AlertPageLazyRoute: AlertPageLazyRoute,
+  AvatarPageLazyRoute: AvatarPageLazyRoute,
+  BadgePageLazyRoute: BadgePageLazyRoute,
+  ButtonGroupPageLazyRoute: ButtonGroupPageLazyRoute,
+  ButtonPageLazyRoute: ButtonPageLazyRoute,
+  CardPageLazyRoute: CardPageLazyRoute,
+  CheckboxPageLazyRoute: CheckboxPageLazyRoute,
+  CollapsiblePageLazyRoute: CollapsiblePageLazyRoute,
+  ComboboxPageLazyRoute: ComboboxPageLazyRoute,
+  DialogPageLazyRoute: DialogPageLazyRoute,
+  EmptyPageLazyRoute: EmptyPageLazyRoute,
+  FieldPageLazyRoute: FieldPageLazyRoute,
+  InputGroupPageLazyRoute: InputGroupPageLazyRoute,
+  InputPageLazyRoute: InputPageLazyRoute,
+  ItemPageLazyRoute: ItemPageLazyRoute,
+  KbdPageLazyRoute: KbdPageLazyRoute,
+  LinkPageLazyRoute: LinkPageLazyRoute,
+  NativeSelectPageLazyRoute: NativeSelectPageLazyRoute,
+  PopoverPageLazyRoute: PopoverPageLazyRoute,
+  RadioGroupPageLazyRoute: RadioGroupPageLazyRoute,
+  SelectPageLazyRoute: SelectPageLazyRoute,
+  SeparatorPageLazyRoute: SeparatorPageLazyRoute,
+  SidebarPageLazyRoute: SidebarPageLazyRoute,
+  SkeletonPageLazyRoute: SkeletonPageLazyRoute,
+  SliderPageLazyRoute: SliderPageLazyRoute,
+  SonnerPageLazyRoute: SonnerPageLazyRoute,
+  SpinnerPageLazyRoute: SpinnerPageLazyRoute,
+  SwitchPageLazyRoute: SwitchPageLazyRoute,
+  TabsPageLazyRoute: TabsPageLazyRoute,
+  TextareaPageLazyRoute: TextareaPageLazyRoute,
+  TooltipPageLazyRoute: TooltipPageLazyRoute,
+  TypographyPageLazyRoute: TypographyPageLazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
