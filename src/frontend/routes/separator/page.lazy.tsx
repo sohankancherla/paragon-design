@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Separator } from "@/packages/design-system/components/ui/separator";
 
 export const Route = createLazyFileRoute("/separator/")({
@@ -17,7 +14,7 @@ function SeparatorPage() {
 			<SeparatorVerticalMenu />
 			<SeparatorInList />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SeparatorHorizontal() {
@@ -37,7 +34,7 @@ function SeparatorHorizontal() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SeparatorVertical() {
@@ -51,7 +48,7 @@ function SeparatorVertical() {
 				<div>Source</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SeparatorVerticalMenu() {
@@ -78,7 +75,7 @@ function SeparatorVerticalMenu() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SeparatorInList() {
@@ -101,5 +98,5 @@ function SeparatorInList() {
 				</dl>
 			</div>
 		</Example>
-	)
+	);
 }

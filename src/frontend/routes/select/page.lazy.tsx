@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { ChartBarIcon, ChartLineIcon, ChartPieIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Dialog,
@@ -64,7 +61,7 @@ function RouteComponent() {
 			<SelectDisabled />
 			<SelectInDialog />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SelectBasic() {
@@ -75,7 +72,7 @@ function SelectBasic() {
 		{ label: "Blueberry", value: "blueberry" },
 		{ label: "Grapes", value: "grapes" },
 		{ label: "Pineapple", value: "pineapple" }
-	]
+	];
 	return (
 		<Example title="Basic">
 			<Select items={items}>
@@ -93,7 +90,7 @@ function SelectBasic() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 function SelectSides() {
@@ -102,7 +99,7 @@ function SelectSides() {
 		{ label: "Apple", value: "apple" },
 		{ label: "Banana", value: "banana" },
 		{ label: "Blueberry", value: "blueberry" }
-	]
+	];
 	return (
 		<Example title="Sides" containerClassName="col-span-2">
 			<div className="flex flex-wrap justify-center gap-2">
@@ -133,7 +130,7 @@ function SelectSides() {
 				))}
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SelectWithIcons() {
@@ -174,7 +171,7 @@ function SelectWithIcons() {
 			),
 			value: "pie"
 		}
-	]
+	];
 	return (
 		<Example title="With Icons">
 			<div className="flex flex-col gap-4">
@@ -208,7 +205,7 @@ function SelectWithIcons() {
 				</Select>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SelectWithGroups() {
@@ -216,17 +213,17 @@ function SelectWithGroups() {
 		{ label: "Apple", value: "apple" },
 		{ label: "Banana", value: "banana" },
 		{ label: "Blueberry", value: "blueberry" }
-	]
+	];
 	const vegetables = [
 		{ label: "Carrot", value: "carrot" },
 		{ label: "Broccoli", value: "broccoli" },
 		{ label: "Spinach", value: "spinach" }
-	]
+	];
 	const allItems = [
 		{ label: "Select a fruit", value: null },
 		...fruits,
 		...vegetables
-	]
+	];
 	return (
 		<Example title="With Groups & Labels">
 			<Select items={allItems}>
@@ -254,7 +251,7 @@ function SelectWithGroups() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 function SelectLargeList() {
@@ -264,7 +261,7 @@ function SelectLargeList() {
 			label: `Item ${i}`,
 			value: `item-${i}`
 		}))
-	]
+	];
 	return (
 		<Example title="Large List">
 			<Select items={items}>
@@ -282,7 +279,7 @@ function SelectLargeList() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 function SelectSizes() {
@@ -291,7 +288,7 @@ function SelectSizes() {
 		{ label: "Apple", value: "apple" },
 		{ label: "Banana", value: "banana" },
 		{ label: "Blueberry", value: "blueberry" }
-	]
+	];
 	return (
 		<Example title="Sizes">
 			<div className="flex flex-col gap-4">
@@ -325,7 +322,7 @@ function SelectSizes() {
 				</Select>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SelectWithButton() {
@@ -334,7 +331,7 @@ function SelectWithButton() {
 		{ label: "Apple", value: "apple" },
 		{ label: "Banana", value: "banana" },
 		{ label: "Blueberry", value: "blueberry" }
-	]
+	];
 	return (
 		<Example title="With Button">
 			<div className="flex flex-col gap-4">
@@ -376,7 +373,7 @@ function SelectWithButton() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SelectItemAligned() {
@@ -387,7 +384,7 @@ function SelectItemAligned() {
 		{ label: "Blueberry", value: "blueberry" },
 		{ label: "Grapes", value: "grapes", disabled: true },
 		{ label: "Pineapple", value: "pineapple" }
-	]
+	];
 	return (
 		<Example title="Item Aligned">
 			<Select items={items}>
@@ -409,7 +406,7 @@ function SelectItemAligned() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 function SelectWithField() {
@@ -420,7 +417,7 @@ function SelectWithField() {
 		{ label: "Blueberry", value: "blueberry" },
 		{ label: "Grapes", value: "grapes" },
 		{ label: "Pineapple", value: "pineapple" }
-	]
+	];
 	return (
 		<Example title="With Field">
 			<Field>
@@ -444,7 +441,7 @@ function SelectWithField() {
 				</FieldDescription>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function SelectInvalid() {
@@ -455,7 +452,7 @@ function SelectInvalid() {
 		{ label: "Blueberry", value: "blueberry" },
 		{ label: "Grapes", value: "grapes" },
 		{ label: "Pineapple", value: "pineapple" }
-	]
+	];
 	return (
 		<Example title="Invalid">
 			<div className="flex flex-col gap-4">
@@ -493,7 +490,7 @@ function SelectInvalid() {
 				</Field>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SelectInline() {
@@ -502,7 +499,7 @@ function SelectInline() {
 		{ label: "All", value: "all" },
 		{ label: "Active", value: "active" },
 		{ label: "Inactive", value: "inactive" }
-	]
+	];
 	return (
 		<Example title="Inline with Input & NativeSelect">
 			<div className="flex items-center gap-2">
@@ -529,7 +526,7 @@ function SelectInline() {
 				</NativeSelect>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SelectDisabled() {
@@ -540,7 +537,7 @@ function SelectDisabled() {
 		{ label: "Blueberry", value: "blueberry" },
 		{ label: "Grapes", value: "grapes", disabled: true },
 		{ label: "Pineapple", value: "pineapple" }
-	]
+	];
 	return (
 		<Example title="Disabled">
 			<Select items={items} disabled>
@@ -562,7 +559,7 @@ function SelectDisabled() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 const plans = [
@@ -603,7 +600,7 @@ function SelectPlan() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 function SelectPlanItem({ plan }: { plan: (typeof plans)[number] }) {
@@ -616,7 +613,7 @@ function SelectPlanItem({ plan }: { plan: (typeof plans)[number] }) {
 				</ItemDescription>
 			</ItemContent>
 		</Item>
-	)
+	);
 }
 
 function SelectMultiple() {
@@ -628,7 +625,7 @@ function SelectMultiple() {
 		{ label: "Pineapple", value: "pineapple" },
 		{ label: "Strawberry", value: "strawberry" },
 		{ label: "Watermelon", value: "watermelon" }
-	]
+	];
 	return (
 		<Example title="Multiple Selection">
 			<Select items={items} multiple defaultValue={[]}>
@@ -636,7 +633,7 @@ function SelectMultiple() {
 					<SelectValue>
 						{(value: string[]) => {
 							if (value.length === 0) {
-								return "Select fruits"
+								return "Select fruits";
 							}
 							if (value.length === 1) {
 								return items.find(item => item.value === value[0])?.label;
@@ -656,7 +653,7 @@ function SelectMultiple() {
 				</SelectContent>
 			</Select>
 		</Example>
-	)
+	);
 }
 
 function SelectInDialog() {
@@ -667,7 +664,7 @@ function SelectInDialog() {
 		{ label: "Blueberry", value: "blueberry" },
 		{ label: "Grapes", value: "grapes" },
 		{ label: "Pineapple", value: "pineapple" }
-	]
+	];
 	return (
 		<Example title="In Dialog">
 			<Dialog>
@@ -698,5 +695,5 @@ function SelectInDialog() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }

@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Dialog,
@@ -40,7 +37,7 @@ function PopoverPage() {
 			<PopoverAlignments />
 			<PopoverInDialog />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function PopoverBasic() {
@@ -60,7 +57,7 @@ function PopoverBasic() {
 				</PopoverContent>
 			</Popover>
 		</Example>
-	)
+	);
 }
 
 function PopoverSides() {
@@ -101,7 +98,7 @@ function PopoverSides() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function PopoverWithForm() {
@@ -135,7 +132,7 @@ function PopoverWithForm() {
 				</PopoverContent>
 			</Popover>
 		</Example>
-	)
+	);
 }
 
 function PopoverAlignments() {
@@ -168,7 +165,7 @@ function PopoverAlignments() {
 				</Popover>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function PopoverInDialog() {
@@ -204,5 +201,5 @@ function PopoverInDialog() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }

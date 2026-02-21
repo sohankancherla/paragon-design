@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { BluetoothIcon, Trash2Icon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -41,7 +38,7 @@ function AlertDialogPage() {
 			<AlertDialogDestructive />
 			<AlertDialogInDialog />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function AlertDialogBasic() {
@@ -66,7 +63,7 @@ function AlertDialogBasic() {
 				</AlertDialogContent>
 			</AlertDialog>
 		</Example>
-	)
+	);
 }
 
 function AlertDialogSmall() {
@@ -88,7 +85,7 @@ function AlertDialogSmall() {
 				</AlertDialogContent>
 			</AlertDialog>
 		</Example>
-	)
+	);
 }
 
 function AlertDialogWithMedia() {
@@ -116,7 +113,7 @@ function AlertDialogWithMedia() {
 				</AlertDialogContent>
 			</AlertDialog>
 		</Example>
-	)
+	);
 }
 
 function AlertDialogSmallWithMedia() {
@@ -144,7 +141,7 @@ function AlertDialogSmallWithMedia() {
 				</AlertDialogContent>
 			</AlertDialog>
 		</Example>
-	)
+	);
 }
 
 function AlertDialogDestructive() {
@@ -173,7 +170,7 @@ function AlertDialogDestructive() {
 				</AlertDialogContent>
 			</AlertDialog>
 		</Example>
-	)
+	);
 }
 
 function AlertDialogInDialog() {
@@ -213,5 +210,5 @@ function AlertDialogInDialog() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }

@@ -1,10 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 import { CaptionsIcon, PlusIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Avatar,
 	AvatarFallback,
@@ -48,7 +45,7 @@ function CardPage() {
 			<CardLogin />
 			<CardMeetingNotes />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function CardLogin() {
@@ -104,7 +101,7 @@ function CardLogin() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardMeetingNotes() {
@@ -160,7 +157,7 @@ function CardMeetingNotes() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardWithImage() {
@@ -188,7 +185,7 @@ function CardWithImage() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardWithImageSmall() {
@@ -216,7 +213,7 @@ function CardWithImageSmall() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardHeaderWithBorder() {
@@ -234,7 +231,7 @@ function CardHeaderWithBorder() {
 				</CardContent>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardFooterWithBorder() {
@@ -254,7 +251,7 @@ function CardFooterWithBorder() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardDefault() {
@@ -280,7 +277,7 @@ function CardDefault() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardSmall() {
@@ -306,7 +303,7 @@ function CardSmall() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardHeaderWithBorderSmall() {
@@ -324,7 +321,7 @@ function CardHeaderWithBorderSmall() {
 				</CardContent>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CardFooterWithBorderSmall() {
@@ -344,5 +341,5 @@ function CardFooterWithBorderSmall() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }

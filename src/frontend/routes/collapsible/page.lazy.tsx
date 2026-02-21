@@ -7,10 +7,7 @@ import {
 	MinimizeIcon
 } from "lucide-react";
 import { useState } from "react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Card,
@@ -46,7 +43,7 @@ function CollapsiblePage() {
 			<CollapsibleFileTree />
 			<CollapsibleSettings />
 		</ExampleWrapper>
-	)
+	);
 }
 
 type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] };
@@ -98,7 +95,7 @@ function CollapsibleFileTree() {
 		{ name: "tsconfig.json" },
 		{ name: "README.md" },
 		{ name: ".gitignore" }
-	]
+	];
 
 	const renderItem = (fileItem: FileTreeItem) => {
 		if ("items" in fileItem) {
@@ -124,7 +121,7 @@ function CollapsibleFileTree() {
 						</div>
 					</CollapsibleContent>
 				</Collapsible>
-			)
+			);
 		}
 		return (
 			<Button
@@ -137,8 +134,8 @@ function CollapsibleFileTree() {
 					<span>{fileItem.name}</span>
 				</span>
 			</Button>
-		)
-	}
+		);
+	};
 
 	return (
 		<Example title="File Tree" className="items-center">
@@ -158,7 +155,7 @@ function CollapsibleFileTree() {
 				</CardContent>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function CollapsibleSettings() {
@@ -216,5 +213,5 @@ function CollapsibleSettings() {
 				</CardContent>
 			</Card>
 		</Example>
-	)
+	);
 }

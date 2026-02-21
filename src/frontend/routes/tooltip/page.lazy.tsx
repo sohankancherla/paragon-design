@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { InfoIcon, SaveIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import { Kbd } from "@/packages/design-system/components/ui/kbd";
 import { Link } from "@/packages/design-system/components/ui/link";
@@ -29,7 +26,7 @@ function TooltipPage() {
 			<TooltipOnLink />
 			<TooltipFormatted />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function TooltipBasic() {
@@ -44,7 +41,7 @@ function TooltipBasic() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function TooltipSides() {
@@ -74,7 +71,7 @@ function TooltipSides() {
 				))}
 			</div>
 		</Example>
-	)
+	);
 }
 
 function TooltipWithIcon() {
@@ -90,7 +87,7 @@ function TooltipWithIcon() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function TooltipLongContent() {
@@ -106,7 +103,7 @@ function TooltipLongContent() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function TooltipDisabled() {
@@ -123,7 +120,7 @@ function TooltipDisabled() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function TooltipWithKeyboard() {
@@ -140,7 +137,7 @@ function TooltipWithKeyboard() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function TooltipOnLink() {
@@ -163,7 +160,7 @@ function TooltipOnLink() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function TooltipFormatted() {
@@ -181,5 +178,5 @@ function TooltipFormatted() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }

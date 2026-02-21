@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { ThemeProvider } from "next-themes";
-import { DesignSidebar } from "@/frontend/routes/components/design-sidebar";
+import { DesignSidebar } from "@/frontend/components/design-sidebar";
 import { SidebarProvider } from "@/packages/design-system/components/ui/sidebar";
 import { Toaster } from "@/packages/design-system/components/ui/sonner";
 

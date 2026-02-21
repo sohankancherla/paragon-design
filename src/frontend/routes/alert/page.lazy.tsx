@@ -5,10 +5,7 @@ import {
 	CircleAlertIcon,
 	InfoIcon
 } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Alert,
 	AlertAction,
@@ -33,7 +30,7 @@ function AlertPage() {
 			<AlertExample6 />
 			<AlertExample7 />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function AlertExample1() {
@@ -56,7 +53,7 @@ function AlertExample1() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AlertExample2() {
@@ -118,7 +115,7 @@ function AlertExample2() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AlertExample3() {
@@ -142,7 +139,7 @@ function AlertExample3() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AlertExample4() {
@@ -164,7 +161,7 @@ function AlertExample4() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AlertExample5() {
@@ -186,7 +183,7 @@ function AlertExample5() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AlertExample6() {
@@ -223,7 +220,7 @@ function AlertExample6() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AlertExample7() {
@@ -250,5 +247,5 @@ function AlertExample7() {
 				</Alert>
 			</div>
 		</Example>
-	)
+	);
 }

@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { ArrowRightIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Badge } from "@/packages/design-system/components/ui/badge";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
@@ -39,7 +36,7 @@ function SpinnerPage() {
 			<SpinnerInInputGroup />
 			<SpinnerInEmpty />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SpinnerBasic() {
@@ -50,7 +47,7 @@ function SpinnerBasic() {
 				<Spinner className="size-6" />
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SpinnerInButtons() {
@@ -66,7 +63,7 @@ function SpinnerInButtons() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SpinnerInBadges() {
@@ -85,7 +82,7 @@ function SpinnerInBadges() {
 				</Badge>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SpinnerInInputGroup() {
@@ -101,7 +98,7 @@ function SpinnerInInputGroup() {
 				</InputGroup>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function SpinnerInEmpty() {
@@ -136,5 +133,5 @@ function SpinnerInEmpty() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }

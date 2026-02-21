@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Card,
 	CardContent,
@@ -23,7 +20,7 @@ function SkeletonPage() {
 			<SkeletonForm />
 			<SkeletonTable />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SkeletonAvatar() {
@@ -37,7 +34,7 @@ function SkeletonAvatar() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SkeletonCard() {
@@ -53,7 +50,7 @@ function SkeletonCard() {
 				</CardContent>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function SkeletonText() {
@@ -65,7 +62,7 @@ function SkeletonText() {
 				<Skeleton className="h-4 w-3/4" />
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SkeletonForm() {
@@ -83,7 +80,7 @@ function SkeletonForm() {
 				<Skeleton className="h-9 w-24" />
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SkeletonTable() {
@@ -107,5 +104,5 @@ function SkeletonTable() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }

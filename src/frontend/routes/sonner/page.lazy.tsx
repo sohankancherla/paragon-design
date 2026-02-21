@@ -1,10 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
 
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 
 export const Route = createLazyFileRoute("/sonner/")({
@@ -17,7 +14,7 @@ function SonnerPage() {
 			<SonnerBasic />
 			<SonnerWithDescription />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SonnerBasic() {
@@ -67,7 +64,7 @@ function SonnerBasic() {
 							success: data => `${data.name} has been created`,
 							error: "Error"
 						}
-					)
+					);
 				}}
 			>
 				Promise
@@ -80,13 +77,13 @@ function SonnerBasic() {
 							label: "Action",
 							onClick: () => console.log("Action!")
 						}
-					})
+					});
 				}}
 			>
 				Action
 			</Button>
 		</Example>
-	)
+	);
 }
 
 function SonnerWithDescription() {
@@ -103,5 +100,5 @@ function SonnerWithDescription() {
 				Show Toast
 			</Button>
 		</Example>
-	)
+	);
 }

@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Field,
 	FieldDescription,
@@ -23,7 +20,7 @@ function TextareaPage() {
 			<TextareaWithDescription />
 			<TextareaDisabled />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function TextareaBasic() {
@@ -31,7 +28,7 @@ function TextareaBasic() {
 		<Example title="Basic">
 			<Textarea placeholder="Type your message here." />
 		</Example>
-	)
+	);
 }
 
 function TextareaInvalid() {
@@ -39,7 +36,7 @@ function TextareaInvalid() {
 		<Example title="Invalid">
 			<Textarea placeholder="Type your message here." aria-invalid="true" />
 		</Example>
-	)
+	);
 }
 
 function TextareaWithLabel() {
@@ -54,7 +51,7 @@ function TextareaWithLabel() {
 				/>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function TextareaWithDescription() {
@@ -72,7 +69,7 @@ function TextareaWithDescription() {
 				</FieldDescription>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function TextareaDisabled() {
@@ -87,5 +84,5 @@ function TextareaDisabled() {
 				/>
 			</Field>
 		</Example>
-	)
+	);
 }

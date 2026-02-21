@@ -2,10 +2,7 @@ import { createLazyFileRoute } from "@tanstack/react-router";
 import { ChevronDownIcon, GlobeIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Card,
@@ -95,7 +92,7 @@ function ComboboxPage() {
 			<ComboboxWithOtherInputs />
 			<ComboboxDisabledItems />
 		</ExampleWrapper>
-	)
+	);
 }
 
 const frameworks = [
@@ -570,7 +567,7 @@ function ComboboxBasic() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxSides() {
@@ -606,7 +603,7 @@ function ComboboxSides() {
 				))}
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ComboboxDisabled() {
@@ -626,7 +623,7 @@ function ComboboxDisabled() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 const disabledFrameworks = ["Nuxt.js", "Remix"];
@@ -652,7 +649,7 @@ function ComboboxDisabledItems() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxInvalid() {
@@ -698,7 +695,7 @@ function ComboboxInvalid() {
 				</Field>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ComboboxWithClear() {
@@ -718,7 +715,7 @@ function ComboboxWithClear() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxWithGroups() {
@@ -745,7 +742,7 @@ function ComboboxWithGroups() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxWithGroupsAndSeparator() {
@@ -773,7 +770,7 @@ function ComboboxWithGroupsAndSeparator() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxWithForm() {
@@ -782,7 +779,7 @@ function ComboboxWithForm() {
 		const formData = new FormData(event.target as HTMLFormElement);
 		const framework = formData.get("framework") as string;
 		toast(`You selected ${framework} as your framework.`);
-	}
+	};
 
 	return (
 		<Example title="Form with Combobox">
@@ -825,7 +822,7 @@ function ComboboxWithForm() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 const largeListItems = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`);
@@ -847,7 +844,7 @@ function ComboboxLargeList() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxAutoHighlight() {
@@ -867,7 +864,7 @@ function ComboboxAutoHighlight() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboxboxInputAddon() {
@@ -898,7 +895,7 @@ function ComboxboxInputAddon() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxInPopup() {
@@ -928,7 +925,7 @@ function ComboboxInPopup() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxMultiple() {
@@ -966,7 +963,7 @@ function ComboboxMultiple() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxMultipleDisabled() {
@@ -1005,7 +1002,7 @@ function ComboboxMultipleDisabled() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxMultipleInvalid() {
@@ -1087,7 +1084,7 @@ function ComboboxMultipleInvalid() {
 				</Field>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ComboboxMultipleNoRemove() {
@@ -1127,7 +1124,7 @@ function ComboboxMultipleNoRemove() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxWithCustomItems() {
@@ -1161,7 +1158,7 @@ function ComboboxWithCustomItems() {
 				</ComboboxContent>
 			</Combobox>
 		</Example>
-	)
+	);
 }
 
 function ComboboxInDialog() {
@@ -1213,7 +1210,7 @@ function ComboboxInDialog() {
 							type="button"
 							onClick={() => {
 								toast("Framework selected.");
-								setOpen(false)
+								setOpen(false);
 							}}
 						>
 							Confirm
@@ -1222,7 +1219,7 @@ function ComboboxInDialog() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }
 
 const items = [
@@ -1305,5 +1302,5 @@ function ComboboxWithOtherInputs() {
 				</InputGroupAddon>
 			</InputGroup>
 		</Example>
-	)
+	);
 }

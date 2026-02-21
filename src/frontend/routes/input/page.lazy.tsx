@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Field,
@@ -43,7 +40,7 @@ function InputPage() {
 			<InputWithNativeSelect />
 			<InputForm />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function InputBasic() {
@@ -51,7 +48,7 @@ function InputBasic() {
 		<Example title="Basic">
 			<Input type="email" placeholder="Email" />
 		</Example>
-	)
+	);
 }
 
 function InputVariants() {
@@ -60,7 +57,7 @@ function InputVariants() {
 			<Input type="email" placeholder="Email" variant="default" />
 			<Input type="email" placeholder="Email" variant="ghost" />
 		</Example>
-	)
+	);
 }
 
 function InputSizes() {
@@ -70,7 +67,7 @@ function InputSizes() {
 			<Input type="email" placeholder="Email" size="default" />
 			<Input type="email" placeholder="Email" size="lg" />
 		</Example>
-	)
+	);
 }
 
 function InputInvalid() {
@@ -78,7 +75,7 @@ function InputInvalid() {
 		<Example title="Invalid">
 			<Input type="text" placeholder="Error" aria-invalid="true" />
 		</Example>
-	)
+	);
 }
 
 function InputWithLabel() {
@@ -89,7 +86,7 @@ function InputWithLabel() {
 				<Input id="input-demo-email" type="email" />
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function InputWithDescription() {
@@ -107,7 +104,7 @@ function InputWithDescription() {
 				</FieldDescription>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function InputDisabled() {
@@ -123,7 +120,7 @@ function InputDisabled() {
 				/>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function InputTypes() {
@@ -176,7 +173,7 @@ function InputTypes() {
 				</Field>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function InputWithSelect() {
@@ -196,7 +193,7 @@ function InputWithSelect() {
 				</Select>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function InputWithButton() {
@@ -207,7 +204,7 @@ function InputWithButton() {
 				<Button>Search</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function InputWithNativeSelect() {
@@ -222,7 +219,7 @@ function InputWithNativeSelect() {
 				</NativeSelect>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function InputForm() {
@@ -281,5 +278,5 @@ function InputForm() {
 				</FieldGroup>
 			</form>
 		</Example>
-	)
+	);
 }

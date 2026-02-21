@@ -1,10 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 import { InboxIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Item,
@@ -51,7 +48,7 @@ function ItemPage() {
 			<OutlineVariantItemsWithImageExtraSmall />
 			<MutedVariantItemsWithImage />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function DefaultVariantItems() {
@@ -149,7 +146,7 @@ function DefaultVariantItems() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function OutlineVariantItems() {
@@ -247,7 +244,7 @@ function OutlineVariantItems() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function MutedVariantItems() {
@@ -345,7 +342,7 @@ function MutedVariantItems() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function DefaultVariantItemsSmall() {
@@ -447,7 +444,7 @@ function DefaultVariantItemsSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function OutlineVariantItemsSmall() {
@@ -549,7 +546,7 @@ function OutlineVariantItemsSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function MutedVariantItemsSmall() {
@@ -651,7 +648,7 @@ function MutedVariantItemsSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function DefaultVariantItemsExtraSmall() {
@@ -753,7 +750,7 @@ function DefaultVariantItemsExtraSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function OutlineVariantItemsExtraSmall() {
@@ -855,7 +852,7 @@ function OutlineVariantItemsExtraSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function MutedVariantItemsExtraSmall() {
@@ -957,7 +954,7 @@ function MutedVariantItemsExtraSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function DefaultLinkItems() {
@@ -1011,7 +1008,7 @@ function DefaultLinkItems() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function OutlineLinkItems() {
@@ -1065,7 +1062,7 @@ function OutlineLinkItems() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function MutedLinkItems() {
@@ -1119,7 +1116,7 @@ function MutedLinkItems() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function DefaultItemGroup() {
@@ -1146,7 +1143,7 @@ function DefaultItemGroup() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function OutlineItemGroup() {
@@ -1182,7 +1179,7 @@ function OutlineItemGroup() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function MutedItemGroup() {
@@ -1224,7 +1221,7 @@ function MutedItemGroup() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function ItemSeparatorExample() {
@@ -1272,7 +1269,7 @@ function ItemSeparatorExample() {
 				</Item>
 			</ItemGroup>
 		</Example>
-	)
+	);
 }
 
 function ItemHeaderExamples() {
@@ -1315,7 +1312,7 @@ function ItemHeaderExamples() {
 				</ItemContent>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function ItemFooterExamples() {
@@ -1364,7 +1361,7 @@ function ItemFooterExamples() {
 				</ItemFooter>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function ItemHeaderAndFooterExamples() {
@@ -1422,7 +1419,7 @@ function ItemHeaderAndFooterExamples() {
 				</ItemFooter>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function DefaultVariantItemsWithImage() {
@@ -1486,7 +1483,7 @@ function DefaultVariantItemsWithImage() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function OutlineVariantItemsWithImage() {
@@ -1550,7 +1547,7 @@ function OutlineVariantItemsWithImage() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function OutlineVariantItemsWithImageSmall() {
@@ -1614,7 +1611,7 @@ function OutlineVariantItemsWithImageSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function OutlineVariantItemsWithImageExtraSmall() {
@@ -1671,7 +1668,7 @@ function OutlineVariantItemsWithImageExtraSmall() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }
 
 function MutedVariantItemsWithImage() {
@@ -1735,5 +1732,5 @@ function MutedVariantItemsWithImage() {
 				</ItemActions>
 			</Item>
 		</Example>
-	)
+	);
 }

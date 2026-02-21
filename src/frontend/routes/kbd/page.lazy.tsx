@@ -5,10 +5,7 @@ import {
 	CircleDashedIcon,
 	SaveIcon
 } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	InputGroup,
@@ -39,7 +36,7 @@ function KbdPage() {
 			<KbdInTooltip />
 			<KbdWithSamp />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function KbdBasic() {
@@ -51,7 +48,7 @@ function KbdBasic() {
 				<Kbd>Ctrl + B</Kbd>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function KbdModifierKeys() {
@@ -62,7 +59,7 @@ function KbdModifierKeys() {
 				<Kbd>C</Kbd>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function KbdGroupExample() {
@@ -74,7 +71,7 @@ function KbdGroupExample() {
 				<Kbd>P</Kbd>
 			</KbdGroup>
 		</Example>
-	)
+	);
 }
 
 function KbdArrowKeys() {
@@ -87,7 +84,7 @@ function KbdArrowKeys() {
 				<Kbd>→</Kbd>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function KbdWithIcons() {
@@ -105,7 +102,7 @@ function KbdWithIcons() {
 				</Kbd>
 			</KbdGroup>
 		</Example>
-	)
+	);
 }
 
 function KbdWithIconsAndText() {
@@ -122,7 +119,7 @@ function KbdWithIconsAndText() {
 				</Kbd>
 			</KbdGroup>
 		</Example>
-	)
+	);
 }
 
 function KbdInInputGroup() {
@@ -135,7 +132,7 @@ function KbdInInputGroup() {
 				</InputGroupAddon>
 			</InputGroup>
 		</Example>
-	)
+	);
 }
 
 function KbdInTooltip() {
@@ -152,7 +149,7 @@ function KbdInTooltip() {
 				</TooltipContent>
 			</Tooltip>
 		</Example>
-	)
+	);
 }
 
 function KbdWithSamp() {
@@ -162,5 +159,5 @@ function KbdWithSamp() {
 				<samp>File</samp>
 			</Kbd>
 		</Example>
-	)
+	);
 }

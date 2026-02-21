@@ -1,10 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { useState } from "react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Badge } from "@/packages/design-system/components/ui/badge";
 import { Checkbox } from "@/packages/design-system/components/ui/checkbox";
 import {
@@ -63,7 +60,7 @@ function FieldPage() {
 			<InputOTPFields />
 			<HorizontalFields />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function InputFields() {
@@ -137,7 +134,7 @@ function InputFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function TextareaFields() {
@@ -199,7 +196,7 @@ function TextareaFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function SelectFields() {
@@ -208,31 +205,31 @@ function SelectFields() {
 		{ label: "Option 1", value: "option1" },
 		{ label: "Option 2", value: "option2" },
 		{ label: "Option 3", value: "option3" }
-	]
+	];
 	const countryItems = [
 		{ label: "Select your country", value: null },
 		{ label: "United States", value: "us" },
 		{ label: "United Kingdom", value: "uk" },
 		{ label: "Canada", value: "ca" }
-	]
+	];
 	const timezoneItems = [
 		{ label: "Select timezone", value: null },
 		{ label: "UTC", value: "utc" },
 		{ label: "Eastern Time", value: "est" },
 		{ label: "Pacific Time", value: "pst" }
-	]
+	];
 	const invalidItems = [
 		{ label: "This field has an error", value: null },
 		{ label: "Option 1", value: "option1" },
 		{ label: "Option 2", value: "option2" },
 		{ label: "Option 3", value: "option3" }
-	]
+	];
 	const disabledItems = [
 		{ label: "Cannot select", value: null },
 		{ label: "Option 1", value: "option1" },
 		{ label: "Option 2", value: "option2" },
 		{ label: "Option 3", value: "option3" }
-	]
+	];
 
 	return (
 		<Example title="Select Fields">
@@ -336,7 +333,7 @@ function SelectFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function NativeSelectFields() {
@@ -431,7 +428,7 @@ function NativeSelectFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function CheckboxFields() {
@@ -512,7 +509,7 @@ function CheckboxFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function RadioFields() {
@@ -664,7 +661,7 @@ function RadioFields() {
 				</FieldSet>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function SwitchFields() {
@@ -735,7 +732,7 @@ function SwitchFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function SliderFields() {
@@ -855,7 +852,7 @@ function SliderFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function InputOTPFields() {
@@ -974,7 +971,7 @@ function InputOTPFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function HorizontalFields() {
@@ -983,7 +980,7 @@ function HorizontalFields() {
 		{ label: "Apple", value: "apple" },
 		{ label: "Banana", value: "banana" },
 		{ label: "Orange", value: "orange" }
-	]
+	];
 
 	return (
 		<Example title="Horizontal Fields">
@@ -1059,5 +1056,5 @@ function HorizontalFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }

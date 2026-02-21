@@ -7,10 +7,7 @@ import {
 	SearchIcon,
 	SettingsIcon
 } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	DropdownMenu,
@@ -48,7 +45,7 @@ function TabsPage() {
 			<TabsVertical />
 			<TabsWithInputAndButton />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function TabsBasic() {
@@ -61,7 +58,7 @@ function TabsBasic() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsLine() {
@@ -75,7 +72,7 @@ function TabsLine() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsVariantsComparison() {
@@ -96,7 +93,7 @@ function TabsVariantsComparison() {
 				</Tabs>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function TabsDisabled() {
@@ -111,7 +108,7 @@ function TabsDisabled() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsWithIcons() {
@@ -130,7 +127,7 @@ function TabsWithIcons() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsIconOnly() {
@@ -150,7 +147,7 @@ function TabsIconOnly() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsMultiple() {
@@ -165,7 +162,7 @@ function TabsMultiple() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsWithContent() {
@@ -190,7 +187,7 @@ function TabsWithContent() {
 				</div>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsLineWithContent() {
@@ -215,7 +212,7 @@ function TabsLineWithContent() {
 				</div>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsLineDisabled() {
@@ -231,7 +228,7 @@ function TabsLineDisabled() {
 				</TabsList>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsWithDropdown() {
@@ -273,7 +270,7 @@ function TabsWithDropdown() {
 				</div>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsVertical() {
@@ -301,7 +298,7 @@ function TabsVertical() {
 				</div>
 			</Tabs>
 		</Example>
-	)
+	);
 }
 
 function TabsWithInputAndButton() {
@@ -331,5 +328,5 @@ function TabsWithInputAndButton() {
 				</div>
 			</Tabs>
 		</Example>
-	)
+	);
 }

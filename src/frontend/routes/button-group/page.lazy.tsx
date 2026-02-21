@@ -19,10 +19,7 @@ import {
 	UserRoundXIcon,
 	VolumeXIcon
 } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	ButtonGroup,
@@ -86,7 +83,7 @@ function ButtonGroupPage() {
 			<ButtonGroupVertical />
 			<ButtonGroupVerticalNested />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function ButtonGroupBasic() {
@@ -99,7 +96,7 @@ function ButtonGroupBasic() {
 				</ButtonGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithInput() {
@@ -116,7 +113,7 @@ function ButtonGroupWithInput() {
 				</ButtonGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithText() {
@@ -135,7 +132,7 @@ function ButtonGroupWithText() {
 				</ButtonGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithDropdown() {
@@ -205,7 +202,7 @@ function ButtonGroupWithDropdown() {
 				</ButtonGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 const currencyItems = [
@@ -241,7 +238,7 @@ function ButtonGroupWithSelect() {
 				</ButtonGroup>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithIcons() {
@@ -261,7 +258,7 @@ function ButtonGroupWithIcons() {
 				</ButtonGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithInputGroup() {
@@ -279,7 +276,7 @@ function ButtonGroupWithInputGroup() {
 				</InputGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithFields() {
@@ -311,7 +308,7 @@ function ButtonGroupWithFields() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupWithLike() {
@@ -332,7 +329,7 @@ function ButtonGroupWithLike() {
 				</Button>
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }
 
 const durationItems = [
@@ -362,7 +359,7 @@ function ButtonGroupWithSelectAndInput() {
 				<Input />
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupNested() {
@@ -387,7 +384,7 @@ function ButtonGroupNested() {
 				</ButtonGroup>
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupPagination() {
@@ -417,7 +414,7 @@ function ButtonGroupPagination() {
 				</Button>
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupPaginationSplit() {
@@ -451,7 +448,7 @@ function ButtonGroupPaginationSplit() {
 				</ButtonGroup>
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupNavigation() {
@@ -473,7 +470,7 @@ function ButtonGroupNavigation() {
 				</ButtonGroup>
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupTextAlignment() {
@@ -497,7 +494,7 @@ function ButtonGroupTextAlignment() {
 				</ButtonGroup>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupVertical() {
@@ -518,7 +515,7 @@ function ButtonGroupVertical() {
 				</ButtonGroup>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonGroupVerticalNested() {
@@ -554,5 +551,5 @@ function ButtonGroupVerticalNested() {
 				</ButtonGroup>
 			</ButtonGroup>
 		</Example>
-	)
+	);
 }

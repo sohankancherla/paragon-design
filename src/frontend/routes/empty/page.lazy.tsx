@@ -5,10 +5,7 @@ import {
 	FolderIcon,
 	PlusIcon
 } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	Empty,
@@ -40,7 +37,7 @@ function EmptyPage() {
 			<EmptyWithAccentBackgroundAlt />
 			<EmptyInCard />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function EmptyBasic() {
@@ -72,7 +69,7 @@ function EmptyBasic() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }
 
 function EmptyWithAccentBackground() {
@@ -98,7 +95,7 @@ function EmptyWithAccentBackground() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }
 
 function EmptyWithBorder() {
@@ -131,7 +128,7 @@ function EmptyWithBorder() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }
 
 function EmptyWithIcon() {
@@ -155,7 +152,7 @@ function EmptyWithIcon() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }
 
 function EmptyWithAccentBackgroundAlt() {
@@ -188,7 +185,7 @@ function EmptyWithAccentBackgroundAlt() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }
 
 function EmptyInCard() {
@@ -223,5 +220,5 @@ function EmptyInCard() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }

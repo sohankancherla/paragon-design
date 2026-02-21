@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 
 export const Route = createLazyFileRoute("/typography/")({
 	component: TypographyPage
@@ -79,7 +76,7 @@ function TypographyPage() {
 			<ListExample />
 			<CodeExample />
 		</ExampleWrapper>
-	)
+	);
 }
 
 export function TypographyExample() {
@@ -153,7 +150,7 @@ export function TypographyExample() {
 			<ListExample />
 			<CodeExample />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function TableHeader({ children }: { children: React.ReactNode }) {
@@ -161,7 +158,7 @@ function TableHeader({ children }: { children: React.ReactNode }) {
 		<th className="py-3 pr-8 text-left font-medium text-muted-foreground text-sm">
 			{children}
 		</th>
-	)
+	);
 }
 
 function TableRow({
@@ -187,7 +184,7 @@ function TableRow({
 				</td>
 			)}
 		</tr>
-	)
+	);
 }
 
 function ParagraphExample() {
@@ -198,7 +195,7 @@ function ParagraphExample() {
 				of his ways and repealed the joke tax.
 			</p>
 		</Example>
-	)
+	);
 }
 
 function BlockquoteExample() {
@@ -209,7 +206,7 @@ function BlockquoteExample() {
 				it&apos;s only fair that they should pay for the privilege.&quot;
 			</blockquote>
 		</Example>
-	)
+	);
 }
 
 function TableExample() {
@@ -238,7 +235,7 @@ function TableExample() {
 				</tbody>
 			</table>
 		</Example>
-	)
+	);
 }
 
 function ListExample() {
@@ -250,7 +247,7 @@ function ListExample() {
 				<li>3rd level of one-liners : 20 gold coins</li>
 			</ul>
 		</Example>
-	)
+	);
 }
 
 function CodeExample() {
@@ -258,5 +255,5 @@ function CodeExample() {
 		<Example title="Code">
 			<code className="typography text-xs">layout.tsx</code>
 		</Example>
-	)
+	);
 }

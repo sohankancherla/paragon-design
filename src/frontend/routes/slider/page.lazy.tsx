@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Label } from "@/packages/design-system/components/ui/label";
 import { Slider } from "@/packages/design-system/components/ui/slider";
 
@@ -21,7 +18,7 @@ function SliderPage() {
 			<SliderControlled />
 			<SliderDisabled />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SliderBasic() {
@@ -29,7 +26,7 @@ function SliderBasic() {
 		<Example title="Basic">
 			<Slider defaultValue={50} max={100} step={1} />
 		</Example>
-	)
+	);
 }
 
 function SliderRange() {
@@ -37,7 +34,7 @@ function SliderRange() {
 		<Example title="Range">
 			<Slider defaultValue={[25, 50]} max={100} step={5} />
 		</Example>
-	)
+	);
 }
 
 function SliderMultiple() {
@@ -45,7 +42,7 @@ function SliderMultiple() {
 		<Example title="Multiple Thumbs">
 			<Slider defaultValue={[10, 20, 70]} max={100} step={10} />
 		</Example>
-	)
+	);
 }
 
 function SliderVertical() {
@@ -68,7 +65,7 @@ function SliderVertical() {
 				/>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SliderControlled() {
@@ -93,7 +90,7 @@ function SliderControlled() {
 				/>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SliderDisabled() {
@@ -101,5 +98,5 @@ function SliderDisabled() {
 		<Example title="Disabled">
 			<Slider defaultValue={[50]} max={100} step={1} disabled />
 		</Example>
-	)
+	);
 }

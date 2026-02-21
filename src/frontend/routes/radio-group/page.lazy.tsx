@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Field,
 	FieldContent,
@@ -30,7 +27,7 @@ function RadioGroupPage() {
 			<RadioGroupDisabled />
 			<RadioGroupInvalid />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function RadioGroupBasic() {
@@ -57,7 +54,7 @@ function RadioGroupBasic() {
 				</Field>
 			</RadioGroup>
 		</Example>
-	)
+	);
 }
 
 function RadioGroupWithDescriptions() {
@@ -97,7 +94,7 @@ function RadioGroupWithDescriptions() {
 				</FieldLabel>
 			</RadioGroup>
 		</Example>
-	)
+	);
 }
 
 function RadioGroupWithFieldSet() {
@@ -130,7 +127,7 @@ function RadioGroupWithFieldSet() {
 				</RadioGroup>
 			</FieldSet>
 		</Example>
-	)
+	);
 }
 
 function RadioGroupGrid() {
@@ -163,7 +160,7 @@ function RadioGroupGrid() {
 				</FieldLabel>
 			</RadioGroup>
 		</Example>
-	)
+	);
 }
 
 function RadioGroupDisabled() {
@@ -190,7 +187,7 @@ function RadioGroupDisabled() {
 				</Field>
 			</RadioGroup>
 		</Example>
-	)
+	);
 }
 
 function RadioGroupInvalid() {
@@ -223,5 +220,5 @@ function RadioGroupInvalid() {
 				</RadioGroup>
 			</FieldSet>
 		</Example>
-	)
+	);
 }

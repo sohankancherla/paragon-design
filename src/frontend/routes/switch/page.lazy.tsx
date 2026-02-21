@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Field,
 	FieldContent,
@@ -25,7 +22,7 @@ function SwitchPage() {
 			<SwitchDisabled />
 			<SwitchSizes />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function SwitchBasic() {
@@ -36,7 +33,7 @@ function SwitchBasic() {
 				<FieldLabel htmlFor="switch-basic">Airplane Mode</FieldLabel>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function SwitchWithDescription() {
@@ -55,7 +52,7 @@ function SwitchWithDescription() {
 				</Field>
 			</FieldLabel>
 		</Example>
-	)
+	);
 }
 
 function SwitchDisabled() {
@@ -74,7 +71,7 @@ function SwitchDisabled() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function SwitchSizes() {
@@ -91,5 +88,5 @@ function SwitchSizes() {
 				</div>
 			</div>
 		</Example>
-	)
+	);
 }

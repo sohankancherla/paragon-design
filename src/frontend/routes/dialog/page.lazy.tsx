@@ -1,10 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { InfoIcon } from "lucide-react";
 import { useState } from "react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import { Checkbox } from "@/packages/design-system/components/ui/checkbox";
 import {
@@ -75,7 +72,7 @@ function DialogPage() {
 			<DialogNoCloseButton />
 			<DialogChatSettings />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function DialogWithForm() {
@@ -118,7 +115,7 @@ function DialogWithForm() {
 				</form>
 			</Dialog>
 		</Example>
-	)
+	);
 }
 
 function DialogScrollableContent() {
@@ -155,7 +152,7 @@ function DialogScrollableContent() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }
 
 function DialogWithStickyFooter() {
@@ -197,7 +194,7 @@ function DialogWithStickyFooter() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }
 
 function DialogNoCloseButton() {
@@ -223,7 +220,7 @@ function DialogNoCloseButton() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }
 
 const spokenLanguages = [
@@ -602,5 +599,5 @@ function DialogChatSettings() {
 				</DialogContent>
 			</Dialog>
 		</Example>
-	)
+	);
 }

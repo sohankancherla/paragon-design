@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 
 export const Route = createLazyFileRoute("/button/")({
@@ -22,7 +19,7 @@ function ButtonPage() {
 			<ButtonInvalidStates />
 			<ButtonExamples />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function ButtonVariantsAndSizes() {
@@ -127,7 +124,7 @@ function ButtonVariantsAndSizes() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonIconRight() {
@@ -260,7 +257,7 @@ function ButtonIconRight() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonIconLeft() {
@@ -405,7 +402,7 @@ function ButtonIconLeft() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonIconOnly() {
@@ -532,7 +529,7 @@ function ButtonIconOnly() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonLoading() {
@@ -574,7 +571,7 @@ function ButtonLoading() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonAsChild() {
@@ -602,7 +599,7 @@ function ButtonAsChild() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonInvalidStates() {
@@ -727,7 +724,7 @@ function ButtonInvalidStates() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function ButtonExamples() {
@@ -749,5 +746,5 @@ function ButtonExamples() {
 				</Button>
 			</div>
 		</Example>
-	)
+	);
 }

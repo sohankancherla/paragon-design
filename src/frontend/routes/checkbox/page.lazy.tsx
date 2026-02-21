@@ -1,7 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-import { Example, ExampleWrapper } from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Checkbox } from "@/packages/design-system/components/ui/checkbox";
 import {
 	Field,

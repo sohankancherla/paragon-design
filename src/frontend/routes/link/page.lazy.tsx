@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { ChevronLeftIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Link } from "@/packages/design-system/components/ui/link";
 
 export const Route = createLazyFileRoute("/link/")({
@@ -15,7 +12,7 @@ function LinkPage() {
 		<ExampleWrapper title="Link">
 			<LinkVariantsAndSizes />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function LinkVariantsAndSizes() {
@@ -325,5 +322,5 @@ function LinkVariantsAndSizes() {
 				</Link>
 			</div>
 		</Example>
-	)
+	);
 }

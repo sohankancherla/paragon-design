@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { ArrowRightIcon, ArrowUpRightIcon, BadgeCheckIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Badge } from "@/packages/design-system/components/ui/badge";
 import { Spinner } from "@/packages/design-system/components/ui/spinner";
 
@@ -21,7 +18,7 @@ function BadgePage() {
 			<BadgeAsLink />
 			<BadgeLongText />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function BadgeVariants() {
@@ -39,7 +36,7 @@ function BadgeVariants() {
 				<Badge variant="link">Link</Badge>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function BadgeWithIconLeft() {
@@ -73,7 +70,7 @@ function BadgeWithIconLeft() {
 				</Badge>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function BadgeWithIconRight() {
@@ -107,7 +104,7 @@ function BadgeWithIconRight() {
 				</Badge>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function BadgeWithSpinner() {
@@ -141,7 +138,7 @@ function BadgeWithSpinner() {
 				</Badge>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function BadgeAsLink() {
@@ -191,7 +188,7 @@ function BadgeAsLink() {
 				/>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function BadgeLongText() {
@@ -203,5 +200,5 @@ function BadgeLongText() {
 				</Badge>
 			</div>
 		</Example>
-	)
+	);
 }

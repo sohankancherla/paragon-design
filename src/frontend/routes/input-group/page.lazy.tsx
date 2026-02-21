@@ -18,10 +18,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import { Button } from "@/packages/design-system/components/ui/button";
 import {
 	ButtonGroup,
@@ -90,7 +87,7 @@ function InputGroupPage() {
 			<InputGroupInCard />
 			<InputGroupTextareaExamples />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function InputGroupBasic() {
@@ -131,7 +128,7 @@ function InputGroupBasic() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function InputGroupWithAddons() {
@@ -241,7 +238,7 @@ function InputGroupWithAddons() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function InputGroupWithButtons() {
@@ -301,7 +298,7 @@ function InputGroupWithButtons() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function InputGroupWithTooltip({
@@ -428,7 +425,7 @@ function InputGroupWithTooltip({
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function InputGroupWithKbd() {
@@ -550,7 +547,7 @@ function InputGroupWithKbd() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }
 
 function InputGroupInCard() {
@@ -611,7 +608,7 @@ function InputGroupInCard() {
 				</CardFooter>
 			</Card>
 		</Example>
-	)
+	);
 }
 
 function InputGroupTextareaExamples() {
@@ -758,5 +755,5 @@ function InputGroupTextareaExamples() {
 				</Field>
 			</FieldGroup>
 		</Example>
-	)
+	);
 }

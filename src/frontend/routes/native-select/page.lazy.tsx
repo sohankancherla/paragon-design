@@ -1,8 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Field,
 	FieldDescription,
@@ -28,7 +25,7 @@ function NativeSelectPage() {
 			<NativeSelectDisabled />
 			<NativeSelectInvalid />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function NativeSelectBasic() {
@@ -45,7 +42,7 @@ function NativeSelectBasic() {
 				<NativeSelectOption value="pineapple">Pineapple</NativeSelectOption>
 			</NativeSelect>
 		</Example>
-	)
+	);
 }
 
 function NativeSelectWithGroups() {
@@ -65,7 +62,7 @@ function NativeSelectWithGroups() {
 				</NativeSelectOptGroup>
 			</NativeSelect>
 		</Example>
-	)
+	);
 }
 
 function NativeSelectSizes() {
@@ -86,7 +83,7 @@ function NativeSelectSizes() {
 				</NativeSelect>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function NativeSelectWithField() {
@@ -104,7 +101,7 @@ function NativeSelectWithField() {
 				<FieldDescription>Select your country of residence.</FieldDescription>
 			</Field>
 		</Example>
-	)
+	);
 }
 
 function NativeSelectDisabled() {
@@ -117,7 +114,7 @@ function NativeSelectDisabled() {
 				<NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
 			</NativeSelect>
 		</Example>
-	)
+	);
 }
 
 function NativeSelectInvalid() {
@@ -130,5 +127,5 @@ function NativeSelectInvalid() {
 				<NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
 			</NativeSelect>
 		</Example>
-	)
+	);
 }

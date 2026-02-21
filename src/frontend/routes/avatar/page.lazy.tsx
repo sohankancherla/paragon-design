@@ -1,9 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { CheckIcon, PlusIcon } from "lucide-react";
-import {
-	Example,
-	ExampleWrapper
-} from "@/frontend/routes/components/example";
+import { Example, ExampleWrapper } from "@/frontend/components/example";
 import {
 	Avatar,
 	AvatarBadge,
@@ -39,7 +36,7 @@ function AvatarPage() {
 			<AvatarGroupWithIconCount />
 			<AvatarInEmpty />
 		</ExampleWrapper>
-	)
+	);
 }
 
 function AvatarSizes() {
@@ -78,7 +75,7 @@ function AvatarSizes() {
 				</Avatar>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AvatarWithBadge() {
@@ -137,7 +134,7 @@ function AvatarWithBadge() {
 				</Avatar>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AvatarWithBadgeIcon() {
@@ -212,7 +209,7 @@ function AvatarWithBadgeIcon() {
 				</Avatar>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AvatarWithLogo() {
@@ -253,7 +250,7 @@ function AvatarWithLogo() {
 				</Avatar>
 			</div>
 		</Example>
-	)
+	);
 }
 
 function AvatarGroupExample() {
@@ -340,7 +337,7 @@ function AvatarGroupExample() {
 				</Avatar>
 			</AvatarGroup>
 		</Example>
-	)
+	);
 }
 
 function AvatarGroupWithCount() {
@@ -431,7 +428,7 @@ function AvatarGroupWithCount() {
 				<AvatarGroupCount>+3</AvatarGroupCount>
 			</AvatarGroup>
 		</Example>
-	)
+	);
 }
 
 function AvatarGroupWithIconCount() {
@@ -536,7 +533,7 @@ function AvatarGroupWithIconCount() {
 				</AvatarGroupCount>
 			</AvatarGroup>
 		</Example>
-	)
+	);
 }
 
 function AvatarInEmpty() {
@@ -585,5 +582,5 @@ function AvatarInEmpty() {
 				</EmptyContent>
 			</Empty>
 		</Example>
-	)
+	);
 }
