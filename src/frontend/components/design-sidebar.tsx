@@ -1,13 +1,10 @@
 import { Link as TanstackLink, useMatchRoute } from "@tanstack/react-router";
-import { ChevronLeftIcon } from "lucide-react";
-import { Link } from "@/packages/design-system/components/ui/link";
 import {
 	Sidebar,
 	SidebarContent,
 	SidebarGroup,
 	SidebarGroupContent,
 	SidebarGroupLabel,
-	SidebarHeader,
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem
@@ -16,7 +13,7 @@ import {
 const coreItems = [
 	{
 		title: "Home",
-		url: "/design"
+		url: "/"
 	},
 	{
 		title: "Typography",
@@ -188,16 +185,6 @@ export function DesignSidebar() {
 
 	return (
 		<Sidebar>
-			<SidebarHeader className="flex-row">
-				<Link
-					to="/calendar"
-					variant="ghost"
-					size="xs"
-					startIcon={<ChevronLeftIcon />}
-				>
-					Back to app
-				</Link>
-			</SidebarHeader>
 			<SidebarContent>
 				<SidebarGroup>
 					<SidebarGroupLabel>Core</SidebarGroupLabel>
