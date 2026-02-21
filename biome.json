@@ -1,0 +1,83 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"extends": ["ultracite/core", "ultracite/react"],
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2
+	},
+	"javascript": {
+		"formatter": {
+			"indentStyle": "tab",
+			"indentWidth": 2,
+			"arrowParentheses": "asNeeded",
+			"trailingCommas": "none"
+		}
+	},
+	"html": {
+		"formatter": {
+			"indentStyle": "tab",
+			"indentWidth": 2
+		}
+	},
+	"css": {
+		"formatter": {
+			"indentStyle": "tab",
+			"indentWidth": 2
+		},
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"json": {
+		"formatter": {
+			"indentStyle": "tab",
+			"indentWidth": 2
+		}
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"useSortedAttributes": "off"
+			}
+		}
+	},
+	"linter": {
+		"rules": {
+			"a11y": {
+				"useAnchorContent": "off",
+				"useSemanticElements": "off"
+			},
+			"correctness": {
+				"noChildrenProp": "off",
+				"noNestedComponentDefinitions": "off"
+			},
+			"nursery": {
+				"noShadow": "off"
+			},
+			"style": {
+				"useConsistentTypeDefinitions": {
+					"level": "error",
+					"options": {
+						"style": "type"
+					}
+				}
+			},
+			"suspicious": {
+				"noEmptyBlockStatements": "off"
+			}
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/$.ts", "**/$.tsx"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useFilenamingConvention": "off"
+					}
+				}
+			}
+		}
+	]
+}

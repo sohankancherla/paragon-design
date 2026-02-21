@@ -1,0 +1,483 @@
+import { createLazyFileRoute } from "@tanstack/react-router";
+import { addDays, format } from "date-fns";
+import { CalendarIcon, ChevronDownIcon, Clock2Icon } from "lucide-react";
+import { useState } from "react";
+import type { DateRange } from "react-day-picker";
+import { es } from "react-day-picker/locale";
+import {
+	Example,
+	ExampleWrapper
+} from "@/frontend/routes/design/components/example";
+import { Button } from "@/packages/design-system/components/ui/button";
+import {
+	Calendar,
+	CalendarDayButton
+} from "@/packages/design-system/components/ui/calendar";
+import {
+	Card,
+	CardContent,
+	CardFooter
+} from "@/packages/design-system/components/ui/card";
+import {
+	Field,
+	FieldGroup,
+	FieldLabel
+} from "@/packages/design-system/components/ui/field";
+import {
+	InputGroup,
+	InputGroupAddon,
+	InputGroupInput
+} from "@/packages/design-system/components/ui/input-group";
+import {
+	Popover,
+	PopoverContent,
+	PopoverTrigger
+} from "@/packages/design-system/components/ui/popover";
+
+export const Route = createLazyFileRoute("/design/calendar/")({
+	component: CalendarPage
+});
+
+function CalendarPage() {
+	return (
+		<ExampleWrapper title="Calendar">
+			<CalendarSingle />
+			<CalendarMultiple />
+			<CalendarWeekNumbers />
+			<CalendarBookedDates />
+			<CalendarRange />
+			<CalendarRangeMultipleMonths />
+			<CalendarWithTime />
+			<CalendarWithPresets />
+			<CalendarCustomDays />
+			<DatePickerSimple />
+			<DataPickerWithDropdowns />
+			<DatePickerWithRange />
+		</ExampleWrapper>
+	);
+}
+
+function CalendarSingle() {
+	const [date, setDate] = useState<Date | undefined>(
+		new Date(new Date().getFullYear(), new Date().getMonth(), 12)
+	);
+	return (
+		<Example title="Single">
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar
+						mode="single"
+						selected={date}
+						onSelect={setDate}
+						captionLayout="dropdown"
+					/>
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarMultiple() {
+	return (
+		<Example title="Multiple">
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar mode="multiple" />
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarRange() {
+	const [dateRange, setDateRange] = useState<DateRange | undefined>({
+		from: new Date(new Date().getFullYear(), 0, 12),
+		to: addDays(new Date(new Date().getFullYear(), 0, 12), 30)
+	});
+
+	return (
+		<Example
+			title="Range"
+			containerClassName="lg:col-span-full 2xl:col-span-full"
+			className="p-12"
+		>
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar
+						mode="range"
+						defaultMonth={dateRange?.from}
+						selected={dateRange}
+						onSelect={setDateRange}
+						numberOfMonths={2}
+						disabled={date =>
+							date > new Date() || date < new Date("1900-01-01")
+						}
+					/>
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarRangeMultipleMonths() {
+	const [range, setRange] = useState<DateRange | undefined>({
+		from: new Date(new Date().getFullYear(), 3, 12),
+		to: addDays(new Date(new Date().getFullYear(), 3, 12), 60)
+	});
+
+	return (
+		<Example
+			title="Range Multiple Months"
+			containerClassName="lg:col-span-full 2xl:col-span-full"
+			className="p-12"
+		>
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar
+						mode="range"
+						defaultMonth={range?.from}
+						selected={range}
+						onSelect={setRange}
+						numberOfMonths={3}
+						locale={es}
+						fixedWeeks
+					/>
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarBookedDates() {
+	const [date, setDate] = useState<Date | undefined>(
+		new Date(new Date().getFullYear(), 1, 3)
+	);
+	const bookedDates = Array.from(
+		{ length: 15 },
+		(_, i) => new Date(new Date().getFullYear(), 1, 12 + i)
+	);
+
+	return (
+		<Example title="Booked Dates">
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar
+						mode="single"
+						defaultMonth={date}
+						selected={date}
+						onSelect={setDate}
+						disabled={bookedDates}
+						modifiers={{
+							booked: bookedDates
+						}}
+						modifiersClassNames={{
+							booked: "[&>button]:line-through opacity-100"
+						}}
+					/>
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarWithTime() {
+	const [date, setDate] = useState<Date | undefined>(
+		new Date(new Date().getFullYear(), new Date().getMonth(), 12)
+	);
+
+	return (
+		<Example title="With Time">
+			<Card size="sm" className="mx-auto w-fit">
+				<CardContent>
+					<Calendar
+						mode="single"
+						selected={date}
+						onSelect={setDate}
+						className="p-0"
+					/>
+				</CardContent>
+				<CardFooter className="border-t bg-card">
+					<FieldGroup>
+						<Field>
+							<FieldLabel htmlFor="time-from">Start Time</FieldLabel>
+							<InputGroup>
+								<InputGroupInput
+									id="time-from"
+									type="time"
+									step="1"
+									defaultValue="10:30:00"
+									className="appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+								/>
+								<InputGroupAddon>
+									<Clock2Icon />
+								</InputGroupAddon>
+							</InputGroup>
+						</Field>
+						<Field>
+							<FieldLabel htmlFor="time-to">End Time</FieldLabel>
+							<InputGroup>
+								<InputGroupInput
+									id="time-to"
+									type="time"
+									step="1"
+									defaultValue="12:30:00"
+									className="appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+								/>
+								<InputGroupAddon>
+									<Clock2Icon />
+								</InputGroupAddon>
+							</InputGroup>
+						</Field>
+					</FieldGroup>
+				</CardFooter>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarCustomDays() {
+	const [range, setRange] = useState<DateRange | undefined>({
+		from: new Date(new Date().getFullYear(), 11, 8),
+		to: addDays(new Date(new Date().getFullYear(), 11, 8), 10)
+	});
+
+	return (
+		<Example title="Custom Days">
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar
+						mode="range"
+						defaultMonth={range?.from}
+						selected={range}
+						onSelect={setRange}
+						numberOfMonths={1}
+						captionLayout="dropdown"
+						className="[--cell-height:--spacing(10)] [--cell-width:--spacing(10)] md:[--cell-height:--spacing(12)] md:[--cell-width:--spacing(12)]"
+						formatters={{
+							formatMonthDropdown: date => {
+								return date.toLocaleString("default", { month: "long" });
+							}
+						}}
+						components={{
+							DayButton: ({ children, modifiers, day, ...props }) => {
+								const isWeekend =
+									day.date.getDay() === 0 || day.date.getDay() === 6;
+
+								return (
+									<CalendarDayButton day={day} modifiers={modifiers} {...props}>
+										<span className="flex flex-col items-center justify-center">
+											{children}
+											{!modifiers.outside && (
+												<span>{isWeekend ? "$120" : "$100"}</span>
+											)}
+										</span>
+									</CalendarDayButton>
+								);
+							}
+						}}
+					/>
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
+
+function CalendarWithPresets() {
+	const [date, setDate] = useState<Date | undefined>(
+		new Date(new Date().getFullYear(), 1, 12)
+	);
+	const [currentMonth, setCurrentMonth] = useState<Date>(
+		new Date(new Date().getFullYear(), new Date().getMonth(), 1)
+	);
+
+	return (
+		<Example title="With Presets">
+			<Card className="mx-auto w-fit max-w-[280px]" size="sm">
+				<CardContent>
+					<Calendar
+						mode="single"
+						selected={date}
+						onSelect={setDate}
+						month={currentMonth}
+						onMonthChange={setCurrentMonth}
+						fixedWeeks
+						className=""
+					/>
+				</CardContent>
+				<CardFooter className="flex flex-wrap gap-2 border-t">
+					{[
+						{ label: "Today", value: 0 },
+						{ label: "Tomorrow", value: 1 },
+						{ label: "In 3 days", value: 3 },
+						{ label: "In a week", value: 7 },
+						{ label: "In 2 weeks", value: 14 }
+					].map(preset => (
+						<Button
+							key={preset.value}
+							variant="outline"
+							size="sm"
+							className="flex-1"
+							onClick={() => {
+								const newDate = addDays(new Date(), preset.value);
+								setDate(newDate);
+								setCurrentMonth(
+									new Date(newDate.getFullYear(), newDate.getMonth(), 1)
+								);
+							}}
+						>
+							{preset.label}
+						</Button>
+					))}
+				</CardFooter>
+			</Card>
+		</Example>
+	);
+}
+
+function DatePickerSimple() {
+	const [date, setDate] = useState<Date>();
+
+	return (
+		<Example title="Date Picker Simple">
+			<Field className="mx-auto w-72">
+				<FieldLabel htmlFor="date-picker-simple">Date</FieldLabel>
+				<Popover>
+					<PopoverTrigger
+						render={
+							<Button
+								variant="outline"
+								id="date-picker-simple"
+								startIcon={<CalendarIcon />}
+								className="justify-start px-2.5 font-normal"
+							/>
+						}
+					>
+						{date ? format(date, "PPP") : <span>Pick a date</span>}
+					</PopoverTrigger>
+					<PopoverContent className="w-auto p-0" align="start">
+						<Calendar mode="single" selected={date} onSelect={setDate} />
+					</PopoverContent>
+				</Popover>
+			</Field>
+		</Example>
+	);
+}
+
+function DatePickerWithRange() {
+	const [date, setDate] = useState<DateRange | undefined>({
+		from: new Date(new Date().getFullYear(), 0, 20),
+		to: addDays(new Date(new Date().getFullYear(), 0, 20), 20)
+	});
+
+	let label: React.ReactNode = <span>Pick a date</span>;
+
+	if (date?.from) {
+		label = date.to ? (
+			<>
+				{format(date.from, "LLL dd, y")} - {format(date.to, "LLL dd, y")}
+			</>
+		) : (
+			format(date.from, "LLL dd, y")
+		);
+	}
+
+	return (
+		<Example title="Date Picker Range">
+			<Field className="mx-auto w-72">
+				<FieldLabel htmlFor="date-picker-range">Date Picker Range</FieldLabel>
+				<Popover>
+					<PopoverTrigger
+						render={
+							<Button
+								variant="outline"
+								id="date-picker-range"
+								startIcon={<CalendarIcon />}
+								className="justify-start px-2.5 font-normal"
+							/>
+						}
+					>
+						{label}
+					</PopoverTrigger>
+					<PopoverContent className="w-auto p-0" align="start">
+						<Calendar
+							mode="range"
+							defaultMonth={date?.from}
+							selected={date}
+							onSelect={setDate}
+							numberOfMonths={2}
+						/>
+					</PopoverContent>
+				</Popover>
+			</Field>
+		</Example>
+	);
+}
+
+function DataPickerWithDropdowns() {
+	const [date, setDate] = useState<Date>();
+	const [open, setOpen] = useState(false);
+
+	return (
+		<Example title="Date Picker with Dropdowns">
+			<Field className="mx-auto w-72">
+				<Popover open={open} onOpenChange={setOpen}>
+					<FieldLabel htmlFor="date-picker-with-dropdowns-desktop">
+						Date
+					</FieldLabel>
+					<PopoverTrigger
+						render={
+							<Button
+								variant="outline"
+								id="date-picker-with-dropdowns-desktop"
+								startIcon={<ChevronDownIcon />}
+								className="justify-start px-2.5 font-normal"
+							/>
+						}
+					>
+						{date ? format(date, "PPP") : <span>Pick a date</span>}
+					</PopoverTrigger>
+					<PopoverContent className="w-auto p-0" align="start">
+						<Calendar
+							mode="single"
+							selected={date}
+							onSelect={setDate}
+							captionLayout="dropdown"
+						/>
+						<div className="flex gap-2 border-t p-2">
+							<Button
+								variant="outline"
+								size="sm"
+								className="w-full"
+								onClick={() => setOpen(false)}
+							>
+								Done
+							</Button>
+						</div>
+					</PopoverContent>
+				</Popover>
+			</Field>
+		</Example>
+	);
+}
+
+function CalendarWeekNumbers() {
+	const [date, setDate] = useState<Date | undefined>(
+		new Date(new Date().getFullYear(), 1, 3)
+	);
+
+	return (
+		<Example title="Week Numbers" className="justify-center">
+			<Card className="mx-auto w-fit p-0">
+				<CardContent className="p-0">
+					<Calendar
+						mode="single"
+						defaultMonth={date}
+						selected={date}
+						onSelect={setDate}
+						showWeekNumber
+					/>
+				</CardContent>
+			</Card>
+		</Example>
+	);
+}
