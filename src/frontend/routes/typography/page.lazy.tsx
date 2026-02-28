@@ -61,6 +61,10 @@ function TypographyPage() {
 					/>
 					<TableRow
 						example="The quick brown fox jumps over the lazy dog"
+						className="text-2xs"
+					/>
+					<TableRow
+						example="The quick brown fox jumps over the lazy dog"
 						className="text-3xs"
 					/>
 					<TableRow

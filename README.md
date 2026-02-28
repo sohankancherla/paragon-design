@@ -1,1 +1,1 @@
-# Paragon
+# Paragon Design
