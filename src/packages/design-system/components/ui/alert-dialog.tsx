@@ -100,7 +100,7 @@ function AlertDialogMedia({
 			data-slot="alert-dialog-media"
 			data-variant={variant}
 			className={cn(
-				"mb-2 inline-flex size-12 items-center justify-center rounded-md data-[variant=default]:bg-muted data-[variant=destructive]:bg-destructive/10 data-[variant=default]:text-muted-foreground data-[variant=destructive]:text-destructive sm:group-data-[size=default]/alert-dialog-content:row-span-2 data-[variant=destructive]:dark:bg-destructive/20 *:[svg:not([class*='size-'])]:size-6.5",
+				"mb-4 inline-flex size-12 items-center justify-center rounded-md data-[variant=default]:bg-muted data-[variant=destructive]:bg-destructive/10 data-[variant=default]:text-muted-foreground data-[variant=destructive]:text-destructive sm:group-data-[size=default]/alert-dialog-content:row-span-2 data-[variant=destructive]:dark:bg-destructive/20 *:[svg:not([class*='size-'])]:size-6.5",
 				className
 			)}
 			{...props}
@@ -116,7 +116,7 @@ function AlertDialogTitle({
 		<AlertDialogPrimitive.Title
 			data-slot="alert-dialog-title"
 			className={cn(
-				"font-medium text-lg sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
+				"font-medium text-base sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
 				className
 			)}
 			{...props}
