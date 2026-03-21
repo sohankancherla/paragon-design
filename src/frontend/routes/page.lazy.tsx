@@ -11,5 +11,5 @@ function DesignPage() {
 			<ParagonAbstract className="size-14" />
 			<h1 className="display-2">The Paragon Design System</h1>
 		</main>
-	)
+	);
 }

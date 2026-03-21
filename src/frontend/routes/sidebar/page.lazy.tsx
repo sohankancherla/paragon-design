@@ -165,7 +165,7 @@ function SidebarPage() {
 				]
 			}
 		]
-	}
+	};
 
 	const [selectedVersion, setSelectedVersion] = useState(data.versions[0]);
 
@@ -263,5 +263,5 @@ function SidebarPage() {
 				</SidebarInset>
 			</div>
 		</main>
-	)
+	);
 }

@@ -188,13 +188,13 @@ function ItemFooter({ className, ...props }: React.ComponentProps<"div">) {
 
 export {
 	Item,
-	ItemMedia,
-	ItemContent,
 	ItemActions,
-	ItemGroup,
-	ItemSeparator,
-	ItemTitle,
+	ItemContent,
 	ItemDescription,
+	ItemFooter,
+	ItemGroup,
 	ItemHeader,
-	ItemFooter
+	ItemMedia,
+	ItemSeparator,
+	ItemTitle
 };

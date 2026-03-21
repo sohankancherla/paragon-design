@@ -1,38 +1,58 @@
 import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";
-import { Image } from "@unpic/react";
+import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
+import { createContext, useContext, useMemo } from "react";
 import { IconEmptyCompany } from "@/packages/design-system/icons/empty-company";
 import { cn } from "@/packages/design-system/lib/utils";
+
+type AvatarContextType = {
+	size: "xs" | "sm" | "default" | "lg";
+};
+
+const AvatarContext = createContext<AvatarContextType>({
+	size: "default"
+});
+
+const avatarVariants = cva(
+	"group/avatar relative flex shrink-0 select-none rounded-full after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten",
+	{
+		variants: {
+			size: {
+				default: "size-8",
+				xs: "size-6",
+				sm: "size-7",
+				lg: "size-9"
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
 
 function Avatar({
 	className,
 	size = "default",
 	...props
-}: AvatarPrimitive.Root.Props & {
-	size?: "default" | "xs" | "sm" | "lg";
-}) {
+}: AvatarPrimitive.Root.Props & VariantProps<typeof avatarVariants>) {
+	const value = useMemo<AvatarContextType>(
+		() => ({ size: size ?? "default" }),
+		[size]
+	);
+
 	return (
-		<AvatarPrimitive.Root
-			data-slot="avatar"
-			data-size={size}
-			className={cn(
-				"group/avatar relative flex size-8 shrink-0 select-none rounded-full after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-9 data-[size=sm]:size-7 data-[size=xs]:size-6 dark:after:mix-blend-lighten",
-				className
-			)}
-			{...props}
-		/>
+		<AvatarContext value={value}>
+			<AvatarPrimitive.Root
+				data-slot="avatar"
+				data-size={size}
+				className={cn(avatarVariants({ size }), className)}
+				{...props}
+			/>
+		</AvatarContext>
 	);
 }
 
-function AvatarImage({
-	className,
-	src,
-	alt,
-	...props
-}: Omit<AvatarPrimitive.Image.Props, "src"> & {
-	src: string;
-	alt: string;
-}) {
+function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
 	return (
 		<AvatarPrimitive.Image
 			data-slot="avatar-image"
@@ -40,94 +60,105 @@ function AvatarImage({
 				"aspect-square size-full rounded-full object-cover",
 				className
 			)}
-			src={src}
-			alt={alt}
-			render={renderProps => (
-				<Image
-					{...renderProps}
-					src={src}
-					alt={alt}
-					layout="constrained"
-					width={72}
-					height={72}
-				/>
-			)}
 			{...props}
 		/>
 	);
 }
+
+const avatarFallbackVariants = cva(
+	"flex size-full items-center justify-center rounded-full bg-muted text-muted-foreground",
+	{
+		variants: {
+			size: {
+				default: "text-sm",
+				xs: "text-2xs",
+				sm: "text-xs",
+				lg: "text-sm"
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
 
 function AvatarFallback({
 	className,
 	...props
 }: AvatarPrimitive.Fallback.Props) {
+	const { size } = useContext(AvatarContext);
+
 	return (
 		<AvatarPrimitive.Fallback
 			data-slot="avatar-fallback"
-			className={cn(
-				"flex size-full items-center justify-center rounded-full bg-muted text-muted-foreground text-sm group-data-[size=sm]/avatar:text-xs group-data-[size=xs]/avatar:text-3xs",
-				className
-			)}
+			className={cn(avatarFallbackVariants({ size }), className)}
 			{...props}
 		/>
 	);
 }
 
+const avatarBadgeVariants = cva(
+	"absolute right-0 bottom-0 z-10 inline-flex select-none items-center justify-center rounded-full bg-primary text-primary-foreground bg-blend-color ring-2 ring-background [&>svg]:stroke-[2.5]",
+	{
+		variants: {
+			size: {
+				default: "size-2.5 [&>svg]:size-2",
+				xs: "size-1.5 [&>svg]:hidden",
+				sm: "size-2 [&>svg]:size-1.5",
+				lg: "size-3 [&>svg]:size-2"
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
+
 function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
+	const { size } = useContext(AvatarContext);
+
 	return (
 		<span
 			data-slot="avatar-badge"
-			className={cn(
-				"absolute right-0 bottom-0 z-10 inline-flex select-none items-center justify-center rounded-full bg-primary text-primary-foreground bg-blend-color ring-2 ring-background",
-				"group-data-[size=xs]/avatar:size-1.5 group-data-[size=xs]/avatar:[&>svg]:hidden",
-				"group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&>svg]:hidden",
-				"group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&>svg]:size-2",
-				"group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&>svg]:size-2",
-				className
-			)}
+			className={cn(avatarBadgeVariants({ size }), className)}
 			{...props}
 		/>
 	);
 }
 
-function AvatarBrandLogo({
-	src,
-	alt = "Company logo",
-	className,
-	...props
-}: React.ComponentProps<"span"> & {
-	src: string;
-	alt?: string;
-}) {
+const avatarBrandLogoVariants = cva(
+	"absolute right-0 bottom-0 z-10 inline-flex select-none items-center justify-center overflow-hidden rounded-full bg-background ring-2 ring-background",
+	{
+		variants: {
+			size: {
+				default: "size-3.5",
+				xs: "size-2.5",
+				sm: "size-3",
+				lg: "size-4"
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
+
+function AvatarBrandLogo({ className, ...props }: AvatarPrimitive.Image.Props) {
+	const { size } = useContext(AvatarContext);
+
 	return (
 		<AvatarPrimitive.Root
-			data-slot="avatar-logo"
-			className={cn(
-				"absolute right-0 bottom-0 z-10 inline-flex select-none items-center justify-center overflow-hidden rounded-full bg-background ring-2 ring-background",
-				"group-data-[size=xs]/avatar:size-2.5",
-				"group-data-[size=sm]/avatar:size-3",
-				"group-data-[size=default]/avatar:size-3.5",
-				"group-data-[size=lg]/avatar:size-4",
-				className
-			)}
-			{...props}
+			data-slot="avatar-brand-logo"
+			className={cn(avatarBrandLogoVariants({ size }), className)}
 		>
 			<AvatarPrimitive.Image
-				src={src}
-				alt={alt}
-				className="pointer-events-none aspect-square size-full rounded-full object-cover"
-				render={renderProps => (
-					<Image
-						{...renderProps}
-						src={src}
-						alt={alt}
-						layout="constrained"
-						width={24}
-						height={24}
-					/>
+				data-slot="avatar-brand-image"
+				className={cn(
+					"aspect-square size-full rounded-full object-cover",
+					className
 				)}
+				{...props}
 			/>
-
 			<AvatarPrimitive.Fallback className="flex size-full items-center justify-center">
 				<IconEmptyCompany className="size-full" />
 			</AvatarPrimitive.Fallback>
@@ -156,7 +187,11 @@ function AvatarGroupCount({
 		<div
 			data-slot="avatar-group-count"
 			className={cn(
-				"relative flex size-8 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground text-sm ring-2 ring-background group-has-data-[size=lg]/avatar-group:size-9 group-has-data-[size=sm]/avatar-group:size-7 group-has-data-[size=xs]/avatar-group:size-6 group-has-data-[size=sm]/avatar-group:text-xs group-has-data-[size=xs]/avatar-group:text-3xs [&>svg]:size-4 group-has-data-[size=lg]/avatar-group:[&>svg]:size-4.5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3.5 group-has-data-[size=xs]/avatar-group:[&>svg]:size-3",
+				"relative flex shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground ring-2 ring-background",
+				"group-has-data-[size=xs]/avatar-group:size-6 group-has-data-[size=xs]/avatar-group:text-2xs group-has-data-[size=xs]/avatar-group:[&>svg]:size-3",
+				"group-has-data-[size=sm]/avatar-group:size-7 group-has-data-[size=sm]/avatar-group:text-xs group-has-data-[size=sm]/avatar-group:[&>svg]:size-3.5",
+				"group-has-data-[size=default]/avatar-group:size-8 group-has-data-[size=default]/avatar-group:text-sm group-has-data-[size=default]/avatar-group:[&>svg]:size-4",
+				"group-has-data-[size=lg]/avatar-group:size-9 group-has-data-[size=lg]/avatar-group:text-sm group-has-data-[size=lg]/avatar-group:[&>svg]:size-4.5",
 				className
 			)}
 			{...props}
@@ -166,10 +201,10 @@ function AvatarGroupCount({
 
 export {
 	Avatar,
-	AvatarImage,
+	AvatarBadge,
+	AvatarBrandLogo,
 	AvatarFallback,
 	AvatarGroup,
 	AvatarGroupCount,
-	AvatarBadge,
-	AvatarBrandLogo
+	AvatarImage
 };
