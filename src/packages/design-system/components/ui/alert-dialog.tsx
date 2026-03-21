@@ -27,7 +27,7 @@ function AlertDialogOverlay({
 		<AlertDialogPrimitive.Backdrop
 			data-slot="alert-dialog-overlay"
 			className={cn(
-				"data-closed:fade-out-0 data-open:fade-in-0 fixed inset-0 isolate z-50 bg-black/30 duration-100 data-closed:animate-out data-open:animate-in dark:bg-black/60",
+				"data-open:fade-in-0 data-closed:fade-out-0 fixed inset-0 isolate z-50 bg-black/30 duration-100 data-closed:animate-out data-open:animate-in dark:bg-black/60",
 				className
 			)}
 			{...props}
@@ -49,7 +49,7 @@ function AlertDialogContent({
 				data-slot="alert-dialog-content"
 				data-size={size}
 				className={cn(
-					"data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 group/alert-dialog-content fixed top-1/2 left-1/2 z-50 grid w-full -translate-x-1/2 -translate-y-1/2 gap-6 rounded-lg bg-background p-6 outline-none ring-1 ring-foreground/10 duration-100 data-[size=default]:max-w-xs data-[size=sm]:max-w-xs data-closed:animate-out data-open:animate-in data-[size=default]:sm:max-w-lg",
+					"group/alert-dialog-content data-open:fade-in-0 data-open:zoom-in-95 data-closed:fade-out-0 data-closed:zoom-out-95 fixed top-1/2 left-1/2 z-50 grid w-full -translate-x-1/2 -translate-y-1/2 gap-6 rounded-xl bg-background p-6 outline-none ring-1 ring-foreground/10 duration-100 data-[size=default]:max-w-xs data-[size=sm]:max-w-xs data-closed:animate-out data-open:animate-in data-[size=default]:sm:max-w-lg",
 					className
 				)}
 				{...props}
@@ -91,16 +91,14 @@ function AlertDialogFooter({
 }
 
 function AlertDialogMedia({
-	variant = "default",
 	className,
 	...props
-}: React.ComponentProps<"div"> & { variant?: "default" | "destructive" }) {
+}: React.ComponentProps<"div">) {
 	return (
 		<div
 			data-slot="alert-dialog-media"
-			data-variant={variant}
 			className={cn(
-				"mb-4 inline-flex size-12 items-center justify-center rounded-md data-[variant=default]:bg-muted data-[variant=destructive]:bg-destructive/10 data-[variant=default]:text-muted-foreground data-[variant=destructive]:text-destructive sm:group-data-[size=default]/alert-dialog-content:row-span-2 data-[variant=destructive]:dark:bg-destructive/20 *:[svg:not([class*='size-'])]:size-6.5",
+				"mb-4 inline-flex size-12 items-center justify-center rounded-md bg-muted sm:group-data-[size=default]/alert-dialog-content:row-span-2 *:[svg:not([class*='size-'])]:size-6",
 				className
 			)}
 			{...props}
