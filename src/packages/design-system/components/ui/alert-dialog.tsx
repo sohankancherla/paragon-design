@@ -1,8 +1,17 @@
 import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
+import { createContext, useContext, useMemo } from "react";
 import { Button } from "@/packages/design-system/components/ui/button";
 import { cn } from "@/packages/design-system/lib/utils";
+
+type AlertDialogContextType = {
+	size: "sm" | "default";
+};
+
+const AlertDialogContext = createContext<AlertDialogContextType>({
+	size: "default"
+});
 
 function AlertDialog({ ...props }: AlertDialogPrimitive.Root.Props) {
 	return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />;
@@ -57,62 +66,102 @@ function AlertDialogContent({
 	...props
 }: AlertDialogPrimitive.Popup.Props &
 	VariantProps<typeof alertDialogContentVariants>) {
+	const value = useMemo<AlertDialogContextType>(
+		() => ({ size: size ?? "default" }),
+		[size]
+	);
+
 	return (
-		<AlertDialogPortal>
-			<AlertDialogOverlay />
-			<AlertDialogPrimitive.Popup
-				data-slot="alert-dialog-content"
-				data-size={size}
-				className={cn(alertDialogContentVariants({ size }), className)}
-				{...props}
-			/>
-		</AlertDialogPortal>
+		<AlertDialogContext value={value}>
+			<AlertDialogPortal>
+				<AlertDialogOverlay />
+				<AlertDialogPrimitive.Popup
+					data-slot="alert-dialog-content"
+					className={cn(alertDialogContentVariants({ size }), className)}
+					{...props}
+				/>
+			</AlertDialogPortal>
+		</AlertDialogContext>
 	);
 }
+
+const alertDialogHeaderVariants = cva(
+	"grid grid-rows-[auto_1fr] place-items-center gap-1.5 text-center has-data-[slot=alert-dialog-media]:grid-rows-[auto_auto_1fr] has-data-[slot=alert-dialog-media]:gap-x-6",
+	{
+		variants: {
+			size: {
+				default:
+					"sm:place-items-start sm:text-left sm:has-data-[slot=alert-dialog-media]:grid-rows-[auto_1fr]",
+				sm: ""
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
 
 function AlertDialogHeader({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
+	const { size } = useContext(AlertDialogContext);
+
 	return (
 		<div
 			data-slot="alert-dialog-header"
-			className={cn(
-				"grid grid-rows-[auto_1fr] place-items-center gap-1.5 text-center has-data-[slot=alert-dialog-media]:grid-rows-[auto_auto_1fr] has-data-[slot=alert-dialog-media]:gap-x-6 sm:group-data-[size=default]/alert-dialog-content:place-items-start sm:group-data-[size=default]/alert-dialog-content:text-left sm:group-data-[size=default]/alert-dialog-content:has-data-[slot=alert-dialog-media]:grid-rows-[auto_1fr]",
-				className
-			)}
+			className={cn(alertDialogHeaderVariants({ size }), className)}
 			{...props}
 		/>
 	);
 }
 
+const alertDialogFooterVariants = cva(
+	"flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
+	{
+		variants: {
+			size: {
+				default: "",
+				sm: "grid grid-cols-2"
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
+
 function AlertDialogFooter({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
+	const { size } = useContext(AlertDialogContext);
+
 	return (
 		<div
 			data-slot="alert-dialog-footer"
-			className={cn(
-				"flex flex-col-reverse gap-2 group-data-[size=sm]/alert-dialog-content:grid group-data-[size=sm]/alert-dialog-content:grid-cols-2 sm:flex-row sm:justify-end",
-				className
-			)}
+			className={cn(alertDialogFooterVariants({ size }), className)}
 			{...props}
 		/>
 	);
 }
 
 const alertDialogMediaVariants = cva(
-	"mb-4 inline-flex size-12 items-center justify-center rounded-md sm:group-data-[size=default]/alert-dialog-content:row-span-2 *:[svg:not([class*='size-'])]:size-6",
+	"mb-4 inline-flex size-12 items-center justify-center rounded-md *:[svg:not([class*='size-'])]:size-6",
 	{
 		variants: {
 			variant: {
 				default: "bg-muted",
 				destructive: "bg-destructive/10 text-destructive"
+			},
+			size: {
+				default: "sm:row-span-2",
+				sm: ""
 			}
 		},
 		defaultVariants: {
-			variant: "default"
+			variant: "default",
+			size: "default"
 		}
 	}
 );
@@ -123,26 +172,43 @@ function AlertDialogMedia({
 	...props
 }: React.ComponentProps<"div"> &
 	VariantProps<typeof alertDialogMediaVariants>) {
+	const { size } = useContext(AlertDialogContext);
+
 	return (
 		<div
 			data-slot="alert-dialog-media"
-			className={cn(alertDialogMediaVariants({ variant }), className)}
+			className={cn(alertDialogMediaVariants({ variant, size }), className)}
 			{...props}
 		/>
 	);
 }
 
+const alertDialogTitleVariants = cva(
+	"font-medium text-base sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
+	{
+		variants: {
+			size: {
+				default:
+					"sm:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
+				sm: ""
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
+
 function AlertDialogTitle({
 	className,
 	...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
+	const { size } = useContext(AlertDialogContext);
+
 	return (
 		<AlertDialogPrimitive.Title
 			data-slot="alert-dialog-title"
-			className={cn(
-				"font-medium text-base sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
-				className
-			)}
+			className={cn(alertDialogTitleVariants({ size }), className)}
 			{...props}
 		/>
 	);
