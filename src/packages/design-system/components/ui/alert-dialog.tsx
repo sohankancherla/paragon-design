@@ -1,4 +1,5 @@
 import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog";
+import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
 import { Button } from "@/packages/design-system/components/ui/button";
 import { cn } from "@/packages/design-system/lib/utils";
@@ -35,23 +36,34 @@ function AlertDialogOverlay({
 	);
 }
 
+const alertDialogContentVariants = cva(
+	"group/alert-dialog-content data-open:fade-in-0 data-open:zoom-in-95 data-closed:fade-out-0 data-closed:zoom-out-95 fixed top-1/2 left-1/2 z-50 grid w-full -translate-x-1/2 -translate-y-1/2 gap-6 rounded-xl bg-background p-6 outline-none ring-1 ring-foreground/10 duration-100 data-closed:animate-out data-open:animate-in",
+	{
+		variants: {
+			size: {
+				default: "max-w-xs sm:max-w-lg",
+				sm: "max-w-xs"
+			}
+		},
+		defaultVariants: {
+			size: "default"
+		}
+	}
+);
+
 function AlertDialogContent({
-	className,
 	size = "default",
+	className,
 	...props
-}: AlertDialogPrimitive.Popup.Props & {
-	size?: "default" | "sm";
-}) {
+}: AlertDialogPrimitive.Popup.Props &
+	VariantProps<typeof alertDialogContentVariants>) {
 	return (
 		<AlertDialogPortal>
 			<AlertDialogOverlay />
 			<AlertDialogPrimitive.Popup
 				data-slot="alert-dialog-content"
 				data-size={size}
-				className={cn(
-					"group/alert-dialog-content data-open:fade-in-0 data-open:zoom-in-95 data-closed:fade-out-0 data-closed:zoom-out-95 fixed top-1/2 left-1/2 z-50 grid w-full -translate-x-1/2 -translate-y-1/2 gap-6 rounded-xl bg-background p-6 outline-none ring-1 ring-foreground/10 duration-100 data-[size=default]:max-w-xs data-[size=sm]:max-w-xs data-closed:animate-out data-open:animate-in data-[size=default]:sm:max-w-lg",
-					className
-				)}
+				className={cn(alertDialogContentVariants({ size }), className)}
 				{...props}
 			/>
 		</AlertDialogPortal>
@@ -90,17 +102,31 @@ function AlertDialogFooter({
 	);
 }
 
+const alertDialogMediaVariants = cva(
+	"mb-4 inline-flex size-12 items-center justify-center rounded-md sm:group-data-[size=default]/alert-dialog-content:row-span-2 *:[svg:not([class*='size-'])]:size-6",
+	{
+		variants: {
+			variant: {
+				default: "bg-muted",
+				destructive: "bg-destructive/10 text-destructive"
+			}
+		},
+		defaultVariants: {
+			variant: "default"
+		}
+	}
+);
+
 function AlertDialogMedia({
+	variant = "default",
 	className,
 	...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<"div"> &
+	VariantProps<typeof alertDialogMediaVariants>) {
 	return (
 		<div
 			data-slot="alert-dialog-media"
-			className={cn(
-				"mb-4 inline-flex size-12 items-center justify-center rounded-md bg-muted sm:group-data-[size=default]/alert-dialog-content:row-span-2 *:[svg:not([class*='size-'])]:size-6",
-				className
-			)}
+			className={cn(alertDialogMediaVariants({ variant }), className)}
 			{...props}
 		/>
 	);
