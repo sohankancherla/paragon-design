@@ -30,7 +30,7 @@ const avatarVariants = cva(
 	}
 );
 
-function Avatar({
+export function Avatar({
 	className,
 	size = "default",
 	...props
@@ -52,7 +52,10 @@ function Avatar({
 	);
 }
 
-function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
+export function AvatarImage({
+	className,
+	...props
+}: AvatarPrimitive.Image.Props) {
 	return (
 		<AvatarPrimitive.Image
 			data-slot="avatar-image"
@@ -82,7 +85,7 @@ const avatarFallbackVariants = cva(
 	}
 );
 
-function AvatarFallback({
+export function AvatarFallback({
 	className,
 	...props
 }: AvatarPrimitive.Fallback.Props) {
@@ -114,7 +117,10 @@ const avatarBadgeVariants = cva(
 	}
 );
 
-function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
+export function AvatarBadge({
+	className,
+	...props
+}: React.ComponentProps<"span">) {
 	const { size } = useContext(AvatarContext);
 
 	return (
@@ -143,7 +149,10 @@ const avatarBrandLogoVariants = cva(
 	}
 );
 
-function AvatarBrandLogo({ className, ...props }: AvatarPrimitive.Image.Props) {
+export function AvatarBrandLogo({
+	className,
+	...props
+}: AvatarPrimitive.Image.Props) {
 	const { size } = useContext(AvatarContext);
 
 	return (
@@ -166,7 +175,10 @@ function AvatarBrandLogo({ className, ...props }: AvatarPrimitive.Image.Props) {
 	);
 }
 
-function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
+export function AvatarGroup({
+	className,
+	...props
+}: React.ComponentProps<"div">) {
 	return (
 		<div
 			data-slot="avatar-group"
@@ -179,7 +191,7 @@ function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
 	);
 }
 
-function AvatarGroupCount({
+export function AvatarGroupCount({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
@@ -198,13 +210,3 @@ function AvatarGroupCount({
 		/>
 	);
 }
-
-export {
-	Avatar,
-	AvatarBadge,
-	AvatarBrandLogo,
-	AvatarFallback,
-	AvatarGroup,
-	AvatarGroupCount,
-	AvatarImage
-};

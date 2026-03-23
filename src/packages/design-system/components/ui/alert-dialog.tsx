@@ -13,23 +13,27 @@ const AlertDialogContext = createContext<AlertDialogContextType>({
 	size: "default"
 });
 
-function AlertDialog({ ...props }: AlertDialogPrimitive.Root.Props) {
+export function AlertDialog({ ...props }: AlertDialogPrimitive.Root.Props) {
 	return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />;
 }
 
-function AlertDialogTrigger({ ...props }: AlertDialogPrimitive.Trigger.Props) {
+export function AlertDialogTrigger({
+	...props
+}: AlertDialogPrimitive.Trigger.Props) {
 	return (
 		<AlertDialogPrimitive.Trigger data-slot="alert-dialog-trigger" {...props} />
 	);
 }
 
-function AlertDialogPortal({ ...props }: AlertDialogPrimitive.Portal.Props) {
+export function AlertDialogPortal({
+	...props
+}: AlertDialogPrimitive.Portal.Props) {
 	return (
 		<AlertDialogPrimitive.Portal data-slot="alert-dialog-portal" {...props} />
 	);
 }
 
-function AlertDialogOverlay({
+export function AlertDialogOverlay({
 	className,
 	...props
 }: AlertDialogPrimitive.Backdrop.Props) {
@@ -60,7 +64,7 @@ const alertDialogContentVariants = cva(
 	}
 );
 
-function AlertDialogContent({
+export function AlertDialogContent({
 	size = "default",
 	className,
 	...props
@@ -101,7 +105,7 @@ const alertDialogHeaderVariants = cva(
 	}
 );
 
-function AlertDialogHeader({
+export function AlertDialogHeader({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
@@ -131,7 +135,7 @@ const alertDialogFooterVariants = cva(
 	}
 );
 
-function AlertDialogFooter({
+export function AlertDialogFooter({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
@@ -166,7 +170,7 @@ const alertDialogMediaVariants = cva(
 	}
 );
 
-function AlertDialogMedia({
+export function AlertDialogMedia({
 	variant = "default",
 	className,
 	...props
@@ -183,23 +187,20 @@ function AlertDialogMedia({
 	);
 }
 
-const alertDialogTitleVariants = cva(
-	"font-medium text-base sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
-	{
-		variants: {
-			size: {
-				default:
-					"sm:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
-				sm: ""
-			}
-		},
-		defaultVariants: {
-			size: "default"
+const alertDialogTitleVariants = cva("font-medium text-base", {
+	variants: {
+		size: {
+			default:
+				"sm:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
+			sm: ""
 		}
+	},
+	defaultVariants: {
+		size: "default"
 	}
-);
+});
 
-function AlertDialogTitle({
+export function AlertDialogTitle({
 	className,
 	...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
@@ -214,7 +215,7 @@ function AlertDialogTitle({
 	);
 }
 
-function AlertDialogDescription({
+export function AlertDialogDescription({
 	className,
 	...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Description>) {
@@ -230,7 +231,7 @@ function AlertDialogDescription({
 	);
 }
 
-function AlertDialogAction({
+export function AlertDialogAction({
 	className,
 	...props
 }: React.ComponentProps<typeof Button>) {
@@ -243,7 +244,7 @@ function AlertDialogAction({
 	);
 }
 
-function AlertDialogCancel({
+export function AlertDialogCancel({
 	className,
 	variant = "outline",
 	size = "default",
@@ -259,18 +260,3 @@ function AlertDialogCancel({
 		/>
 	);
 }
-
-export {
-	AlertDialog,
-	AlertDialogAction,
-	AlertDialogCancel,
-	AlertDialogContent,
-	AlertDialogDescription,
-	AlertDialogFooter,
-	AlertDialogHeader,
-	AlertDialogMedia,
-	AlertDialogOverlay,
-	AlertDialogPortal,
-	AlertDialogTitle,
-	AlertDialogTrigger
-};
